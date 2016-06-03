@@ -53,7 +53,7 @@ Freiburg, Germany}
 \keywords{}
 
 \begin{abstract}
-We give a unified flow approach to the existence of smooth, even $L_p$-Minkowski problems in $\mathbb{R}^{n+1}$ for $p\neq 1>-n-1.$
+We give a unified flow approach to the existence of smooth, even $L_p$-Minkowski problems in $\mathbb{R}^{n+1}$ for $p>-n-1.$
 \end{abstract}
 
 \maketitle
@@ -94,13 +94,13 @@ for some positive constant $c.$ Here $\bar{\nabla}$ is the covariant derivative 
 The $L_p$-Minkowski problem in the smooth category asks when for a positive, smooth function $\varphi$ on the unit sphere, there is a smooth, closed, strictly convex hypersurface that solves (\ref{def: self similar})?
 The existence and regularity of solutions to the $L_p$-Minkowski problem are discussed in \cite{39} for $p > −n-1$; however, the methods used in \cite{39} vary significantly depending on $p$. Our study on (\ref{e: flow0}) is motivated by the search for a variational proof (based on curvature flow) of the $L_p$-Minkowski problem. For $p=1$, Chou-Wang \cite{Chou Wang 2000} treated the classical $L_1$-Minkowki problem in the smooth category by a logarithmic Gauss curvature flow.   For $n=2$, and $p\neq 1>-3$, the existence of solutions to the $L_p$-Minkowski problems follows from Andrews' results \cite{Andrews 1998} on the asymptotic behavior of a family of contracting and expanding flows of curves. Also, in higher dimensions, the existence of solutions to the $L_p$-Minkowski problems follows from \cite{Andrews Ben 2000} when $-n-1<p\leq -n+1$ (a short proof of this is also given in \cite{Ivaki-Proc}) or when $\varphi$ is even (e.q., $\varphi(u)=\varphi(-u)$) and $-n+1<p<1.$ See also \cite{Andrews 1999,AGN, GN, U1, U2}.
 \begin{theorem}
-Let $-n-1<p\ne 1<\infty$ and $\varphi$ be a positive, smooth even function on $\mathbb{S}^{n}$ i.e., $\varphi(u)=\varphi(-u)$. Suppose $K_0$ is origin-symmetric. There exists a unique origin-symmetric solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a smooth, origin-symmetric, strictly convex solution of (\ref{def: self similar}).
+Let $-n-1<p<\infty$ and $\varphi$ be a positive, smooth even function on $\mathbb{S}^{n}$ i.e., $\varphi(u)=\varphi(-u)$. Suppose $K_0$ is origin-symmetric. There exists a unique origin-symmetric solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a smooth, origin-symmetric, strictly convex solution of (\ref{def: self similar}). In addition, if $p\leq n+1$ the convergence is in $C^{\infty}$, and when $p\ge 1$ the convergence holds for the full sequence.
 \end{theorem}
 \begin{theorem}
-Let $-n-1< p\leq -n$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\frac{u}{\varphi(u)h_{K_0}(u)^{1-p}}d\sigma(u)=0$. There exists a unique solution $\{K_t\}$ of flow (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a positive, smooth, strictly convex solution of (\ref{def: self similar}).
+Let $-n-1< p\leq -n$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\frac{u}{\varphi(u)h_{K_0}(u)^{1-p}}d\sigma(u)=0$. There exists a unique solution $\{K_t\}$ of flow (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{\infty}$ to a positive, smooth, strictly convex solution of (\ref{def: self similar}).
 \end{theorem}
 \begin{theorem}
-Let $p\neq 1>-n-1,~\varphi\equiv 1$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\frac{u}{\varphi(u)h_{K_0}(u)^{1-p}}d\sigma(u)=0$. Then there exists a unique solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a positive, smooth, strictly convex solution of (\ref{def: self similar}).
+Let $p>-n-1,~\varphi\equiv 1$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\frac{u}{\varphi(u)h_{K_0}(u)^{1-p}}d\sigma(u)=0$. Then there exists a unique solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a positive, smooth, strictly convex solution of (\ref{def: self similar}). Moreover, if $p\leq n+1$ the convergence is in $C^{\infty}$, and when $p\ge 1$ we have the convergence for the full sequence to the unit ball.
 \end{theorem}
 The main trouble to prove the convergence of the normalized solutions is the long time existence issue. Once it is proved that solutions to the flow exist until they expand to infinity uniformly in all directions, the method of \cite[Section 8]{Ivaki 2014-gauss} applies and yields the convergence of the volume-normalized solutions in $C^{1}$ to self-similar solutions.
 %\begin{theorem}\label{thm: 3}
@@ -350,8 +350,10 @@ Now we can apply the argument in the proof of \cite[Theorem 4.1]{Guan} to prove 
 \[0\leq \frac{C(\beta)\kappa_1^3+C(\beta)}{\|W\|^2}-(\alpha-1)\varepsilon \mathcal{K}\kappa_1
 +C(\alpha).\]
 Take $\alpha$ such that $\varepsilon (\alpha-1) \mathcal{K}\geq C(\beta)+1$. Therefore, in view of (\ref{eq: max1})
-\[0\leq \frac{C(\beta)\kappa_1^3+C(\beta)}{\|W\|^2}-(\alpha-1)\varepsilon \mathcal{K}\kappa_1
-+C(\alpha)\leq \frac{C(\beta)}{c_1^{2\alpha}}-\frac{c_1^{\alpha}}{n}+C(\alpha).\]
+\begin{align}\label{x}
+0\leq \frac{C(\beta)\kappa_1^3+C(\beta)}{\|W\|^2}-(\alpha-1)\varepsilon \mathcal{K}\kappa_1
++C(\alpha)\leq \frac{C(\beta)}{c_1^{2\alpha}}-\frac{c_1^{\alpha}}{n}+C(\alpha).\
+\end{align}
 Thus by taking $\alpha$ large enough we obtain a contradiction.
 \end{proof}
 \begin{remark}
@@ -366,10 +368,82 @@ The solution to (\ref{e: flow0}) satisfies $\lim\limits_{t\to T}\max h_{K_t}=\in
 \end{proposition}
 \begin{proof}
 First, let $p> n+1.$ In this case the flow exists on $[0,\infty).$
-Consider an origin centered ball $B_r$, such that $K_0\supseteq B_r.$ Then $K_t\supseteq B_{r(t)},$ where $$r(t)=\left((\min h_{K_0})^{p-n-1}+t(p-n-1)\min \varphi \right)^{\frac{1}{p-n-1}}$$ and $B_{r(t)}$ expands to infinity as $t$ approaches $\infty$. When $p=n+1$ the argument is similar. Second, if $p<n+1$, then the flow exists only on a finite time interval. If $\max h_{K_t}<\infty$, then by Lemmas \ref{lem: upper}, \ref{lem: lower} and \ref{lem: final}, the evolution equation (\ref{e: flow0}) is uniformly parabolic on $[0,T)$. Thus, the result of Krylov and Safonov \cite{Krylov-Safonov} and standard parabolic theory allow us to extend the solution smoothly past time $T$, contradicting its maximality.
+Consider an origin centered ball $B_r$, such that $K_0\supseteq B_r.$ Then $K_t\supseteq B_{r(t)},$ where $$r(t)=\left((\min h_{K_0})^{p-n-1}+t(p-n-1)\max \varphi \right)^{\frac{1}{p-n-1}}$$ and $B_{r(t)}$ expands to infinity as $t$ approaches $\infty$. When $p=n+1$ the argument is similar. Second, if $p<n+1$, then the flow exists only on a finite time interval. If $\max h_{K_t}<\infty$, then by Lemmas \ref{lem: upper}, \ref{lem: lower} and \ref{lem: final}, the evolution equation (\ref{e: flow0}) is uniformly parabolic on $[0,T)$. Thus, the result of Krylov and Safonov \cite{Krylov-Safonov} and standard parabolic theory allow us to extend the solution smoothly past time $T$, contradicting its maximality.
 \end{proof}
 \section{convergence of normalized solutions}
-By the proof of \cite[Corollary 7.5]{Ivaki 2014-gauss}, there exist $r,R$ such that $$0<r\leq h_{\tilde{K}_t}\leq R<\infty.$$ Therefore, a subsequence of $\{\tilde{K}_{t_k}\}$ converges in the Hausdorff distance to a limiting shape $\tilde{K}_{\infty}$ with the origin in its interior. The argument of \cite[Section 8.1]{Ivaki 2014-gauss} implies  $$\varphi h_{\tilde{K}_{\infty}}^{1-p}f_{\tilde{K}_{\infty}}=c,$$ where $f_{\tilde{K}_{\infty}}$ is the positive continuous curvature function of $\tilde{K}_{\infty}$ and $c$ is some positive constant. By \cite[Fact 8.1]{Ivaki 2014-gauss}, $\tilde{K}_{\infty}$  is smooth and strictly convex. The $C^1$-convergence follows, which is purely geometric and does not depend on the evolution equation, from \cite[Lemma 13]{Andrews 1997}.
+\subsection{Convergence in $C^{1}$, $p\neq 1>-n-1$}\label{sec}
+By the proof of \cite[Corollary 7.5]{Ivaki 2014-gauss}, there exist $r,R$ such that 
+\begin{align}\label{ratio}
+0<r\leq h_{\tilde{K}_t}\leq R<\infty.
+\end{align} 
+Therefore, a subsequence of $\{\tilde{K}_{t_k}\}$ converges in the Hausdorff distance to a limiting shape $\tilde{K}_{\infty}$ with the origin in its interior. The argument of \cite[Section 8.1]{Ivaki 2014-gauss} implies  $$\varphi h_{\tilde{K}_{\infty}}^{1-p}f_{\tilde{K}_{\infty}}=c,$$ where $f_{\tilde{K}_{\infty}}$ is the positive continuous curvature function of $\tilde{K}_{\infty}$ and $c$ is some positive constant. By \cite[Fact 8.1]{Ivaki 2014-gauss}, $\tilde{K}_{\infty}$  is smooth and strictly convex. The $C^1$-convergence follows, which is purely geometric and does not depend on the evolution equation, from \cite[Lemma 13]{Andrews 1997}.
+\begin{remark}
+Section \ref{sec} completes the discussion on the existence of solutions to the smooth, even $L_p$-Minkowski problems in $\mathbb{R}^{n+1}$ for $p\neq 1>-n-1.$ The discussion in the next section is only to cover the case $p=1$ and to show that when $p\leq n+1$ the convergence takes place in the $C^{\infty}$ norm.
+\end{remark}
+\subsection{Convergence in $C^{\infty}$, $-n-1<p\leq n+1$}
+By \cite[Lemma 9.2]{Ivaki 2014-gauss}, there is a uniform upper bound on the Gauss curvature of the normalized solution when $p\leq n+1.$
+In the following, we first obtain a uniform lower bound on the Gauss curvature of the normalized solution $\tilde{K}_t$.
+
+
+A solution of equation (\ref{eq: flow4}) has the following rescaling property.
+Let $h:\mathbb{S}^{n}\times[0,T)\to\mathbb{R}^{n+1}$ be a solution of equation (\ref{eq: flow4}). Then for each $\lambda >0$, $\bar{h}$ defined as $\bar{h}:\mathbb{S}^{n}\times\left[0,T\right)\to\mathbb{R}^{n+1}$ and
+\[\bar{h}(u,t)=\lambda^{\frac{1}{n+1}} h\left(u,\lambda^{\frac{1+n-p}{n+1}}t\right)\]
+is also a solution of evolution equation (\ref{eq: flow4}) with initial data $\lambda^{\frac{1}{n+1}} h\left(u,0\right).$
+
+For each \emph{fixed} time $t\in[0,T),$ define $\bar{h}$ a solution of (\ref{eq: flow4}), by the rescaling property, as follows
+\begin{align*}
+\bar{h}(u,\tau)=\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1}{n+1}}h\left(u,
+t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\tau\right).
+\end{align*}
+Note that $\bar{h}(\cdot,0)$ is the support function of $\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1}{n+1}}K_t$; therefore,
+\[r\leq \bar{h}(u,0)\leq R.\] 
+Write $\bar{K}_{\tau}$ for the convex body associated with $\bar{h}(\cdot,\tau)$ and let $B_c$ denote the ball of radius $c$ centered at the origin. Since $B_{R}$ encloses
+$\bar{K}_0,$ the comparison principle implies that $B_{2R}$
+will encompass $\bar{K}_{\tau}$ for $\tau\in[0,\delta],$
+where $\delta$ depends only on $p,R,\psi$. Lemma \ref{lem: upper} applied to $\bar{h}$ implies that there is a uniform lower bound (depending only on $r,R,p,\psi$) on the Gauss curvature of $\bar{K}_{\frac{\delta}{2}}.$ 
+ 
+On the other hand, the volume of $\bar{K}_{\frac{\delta}{2}}$ is bounded above by $V(B_{2R});$ therefore,
+\[\displaystyle\frac{V(B)}{V(B_{2R})}\leq c_t:=\frac{V(K_t)}{V\left(K_{t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2}}\right)}\leq 1\]
+for all $t\in [0,T)$. Consequently,
+\begin{align*}
+\left(\frac{V(B)}{V\left(K_{t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2}}\right)}\right)^{\frac{1}{n+1}}h\left(u,
+t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2}\right)
+=c_t^{\frac{1}{n+1}}\cdot\bar{h}(\cdot,\frac{\delta}{2})
+\end{align*}
+has a bound below Gauss curvature for all $t\in [0,T)$.  
+
+Now we show that for every
+ $\tilde{t}\in\left[\left(\frac{V(B)}{V(K_0)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2},T\right)$, we can find $t\in[0,T)$ such that
+\[\tilde{t}=t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2}.\]
+Define $f(t)=t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2}-\tilde{t}$ on $[0,T)$.
+This is a continuous function. We have 
+\[\left\{
+    \begin{array}{ll}
+      f(T)=T-\tilde{t}>0, & p<n+1 \\
+      f(\infty)=\infty, & p= n+1 \\
+      f(0)\leq 0& p\leq  n+1 .
+    \end{array}
+  \right.
+\]
+The claim follows.
+
+Now we continue to obtain uniform lower and upper bounds on the principal curvatures of the normalized solution. We only consider the case $p<n+1.$ In this case $T<\infty.$
+For each $t\in [0,T)$ by the comparison principle we have
+\[\frac{(\max h_{K_t})^{p-n-1}}{(n+1-p)\max \varphi}\leq T-t\leq \frac{(\min h_{K_t})^{{p-n-1}}}{(n+1-p)\min \varphi}.\]
+Therefore, since $\frac{\max h_{K_t}}{\min h_{K_t}}\leq \frac{R}{r}$ (see (\ref{ratio})), we get
+\begin{align}\label{qq}
+c_1(T-t)^{\frac{1}{p-n-1}}\leq \min h_{K_t} \leq \left(\frac{V(K_t)}{V(B)}\right)^{\frac{1}{n+1}}\leq \max h_{K_t}\leq c_2(T-t)^{\frac{1}{p-n-1}}.
+\end{align}
+
+Consider the convex bodies $\bar{K}_{\tau}=((n+1-p)(T-t))^{\frac{1}{n+1-p}}K_t,$ where 
+$$\tau(t)=\int_0^t((n+1-p)(T-s))^{-\frac{1}{n+1-p}+2}ds.$$
+Let us furnish all geometric quantities associated with $\bar{K}_{\tau}$ by an over-bar.
+The evolution equation of $\bar{h}_{\tau}$ is given by
+\[\partial_\tau \bar{h}_{\tau}=\varphi \bar{h}^{2-p}\bar{S}_n-\bar{h}\]
+
+ Applying the maximum principle to
+\[\Theta=\frac 12\log(\|\bar{W}\|^2)-\alpha\log \bar{h},\]
+it is not difficult to see, arguing as in the proof Lemma \ref{lem: final}, that $\|\bar{W}\|$ has a uniform upper bound. This in turn, in view of (\ref{qq}) and our lower and upper bounds on the Gauss curvature of $\tilde{K}_t$, implies that we have uniform lower and upper bounds on the principle curvatures of $\tilde{K}_t$. Higher order regularity estimates and convergence in $C^{\infty}$ for a subsequence of times follow from Krylov and Safonov and standard parabolic theory. The convergence for the full sequence when $p\geq 1$ follows from uniqueness of the self similar solutions to (\ref{def: self similar}); see \cite{Lu1,39}.
 \bibliographystyle{amsplain}
 \begin{thebibliography}{10}
 \bibitem{1}J. Ai, K.S. Chou, and J. Wei, ``Self-similar solutions for the anisotropic affine curve shortening problem." Calc. Var. Partial Differential Equations 13(2001): 311--337.
@@ -441,6 +515,10 @@ By the proof of \cite[Corollary 7.5]{Ivaki 2014-gauss}, there exist $r,R$ such t
 
 \end{thebibliography}
 \end{document}
+---------------
+
+By the proof of \cite[Corollary 7.5]{Ivaki 2014-gauss}, there exist $r,R$ such that $$0<r\leq h_{\tilde{K}_t}\leq R<\infty.$$ Therefore, a subsequence of $\{\tilde{K}_{t_k}\}$ converges in the Hausdorff distance to a limiting shape $\tilde{K}_{\infty}$ with the origin in its interior. The argument of \cite[Section 8.1]{Ivaki 2014-gauss} implies  $$\varphi h_{\tilde{K}_{\infty}}^{1-p}f_{\tilde{K}_{\infty}}=c,$$ where $f_{\tilde{K}_{\infty}}$ is the positive continuous curvature function of $\tilde{K}_{\infty}$ and $c$ is some positive constant. By \cite[Fact 8.1]{Ivaki 2014-gauss}, $\tilde{K}_{\infty}$  is smooth and strictly convex. The $C^1$-convergence follows, which is purely geometric and does not depend on the evolution equation, from \cite[Lemma 13]{Andrews 1997}.
+--------------------
 
 We divide the process of obtaining upper bound on principal curvatures into two cases.
 \subsubsection{The case $n=2$}
