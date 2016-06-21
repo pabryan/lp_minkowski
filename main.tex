@@ -59,15 +59,20 @@ We study the asymptotic behavior of a family of curvature flows. Among other res
 
 \maketitle
 \section{Introduction}
-The Minkowski problem deals with existence, uniqueness, regularity, and stability of closed convex hypersurfaces whose Gauss curvature (as a function of the outer normals) is preassigned. Major contributions to this problem were made by Minkowski \cite{M1,M2}, Aleksandrov \cite{A2,A3,A4}, Fenchel and Jessen \cite{FJ}, Lewy \cite{Le1,Le2}, Nirenberg \cite{N}, Calabi \cite{Cal}, Pogorelov \cite{P1,P2}, Cheng and Yau \cite{ChYau}, Caffarelli, Nirenberg, and Spruck \cite{CNS}, and others. A generalization of the Minkowski problem known as the $L_p$-Minkowski problem was introduced by Lutwak \cite{Lu1,Lu2}. This generalization was studied in \cite{Lu1,LuO}. Solutions to many cases of these generalized problems followed later in \cite{1,AnCrys,Andrews Ben 2000,Andrews 2003,27,36,39,49,50,51,72,LYZ,79,104,110,s1,s2,Zhu1,Zhu2,Zhu3,jiang,QL,DZ}. In the smooth category, the $L_p$-Minkowski problem asks if given a smooth, strictly positive function $g : \mathbb{S}^n \to \mathbb{R}$, does there exists a smooth, closed, strictly convex hypersurface $M_0$ such that,
+The Minkowski problem deals with existence, uniqueness, regularity, and stability of closed convex hypersurfaces whose Gauss curvature (as a function of the outer normals) is preassigned. Major contributions to this problem were made by Minkowski \cite{M1,M2}, Aleksandrov \cite{A2,A3,A4}, Fenchel and Jessen \cite{FJ}, Lewy \cite{Le1,Le2}, Nirenberg \cite{N}, Calabi \cite{Cal}, Pogorelov \cite{P1,P2}, Cheng and Yau \cite{ChYau}, Caffarelli, Nirenberg, and Spruck \cite{CNS}, and others. A generalization of the Minkowski problem known as the $L_p$-Minkowski problem was introduced by Lutwak \cite{Lu1,Lu2}. This generalization was studied in \cite{Lu1,LuO}. Solutions to many cases of these generalized problems followed later in \cite{1,AnCrys,Andrews Ben 2000,Andrews 2003,27,36,39,49,50,51,72,LYZ,79,104,110,s1,s2,Zhu1,Zhu2,Zhu3,jiang,QL,DZ}.
+
+In the smooth category, the $L_p$-Minkowski problem asks if given a smooth, strictly positive function $g : \mathbb{S}^n \to \mathbb{R}$, does there exists a smooth, closed, strictly convex hypersurface $M_0$ such that,
 \begin{equation}
 \label{e:lp}
-\frac{1}{\mathcal{K}} = h^{1-p} g(\nu)
+\frac{1}{\mathcal{K}(x)} = h^{1-p}(x, \nu(x)) g(\nu(x))
 \end{equation}
-where $h$ denotes the support function and $\mathcal{K}$ the Gauss curvature. The \emph{even} $L_p$-Minkowski problem requires in addition, that $g$ is an even function. The case $p=1$, is the original Minkowski problem. We use a variation approach based on curvature flows to solve this problem. For convenience, in studying the flow we consider $\phi = 1/g$.
+where $x \in M_0$, $h$ denotes the support function, $\mathcal{K}$ the Gauss curvature and $\nu$ the Gauss map $M_0 \to \mathbb{S}^n$. The \emph{even} $L_p$-Minkowski problem requires in addition, that $g$ is an even function. The case $p=1$, is the original Minkowski problem.
 
 
-Consider a smooth, closed, strictly convex hypersurface $M_0$ in Euclidean space $\mathbb{R}^{n+1}$ given by a smooth embedding $F_0:M\to \mathbb{R}^{n+1}.$ Suppose the origin is in the interior of the region enclosed by $M_0.$ We study the long-time behavior of a family of hypersurfaces $\{M_t\}$ given by smooth maps $F:M\times [0,T)\to \mathbb{R}^{n+1}$ satisfying the initial value problem
+The existence and regularity of solutions to the $L_p$-Minkowski problem are discussed in \cite{39} for $p > −n-1$; however, the methods used in \cite{39} vary significantly depending on $p$. Our study on (\ref{e: flow0}) below is motivated by the search for a variational proof (based on curvature flow) of the $L_p$-Minkowski problem. For $p=1$, Chou-Wang \cite{Chou Wang 2000} treated the classical $L_1$-Minkowki problem in the smooth category by a logarithmic Gauss curvature flow.   For $n=1$, and $p\neq 1>-3$, the existence of solutions to the $L_p$-Minkowski problems follows from Andrews' results \cite{Andrews 1998} on the asymptotic behavior of a family of contracting and expanding flows of curves. Also, in higher dimensions, the existence of solutions to the $L_p$-Minkowski problems follows from \cite{Andrews Ben 2000} when $-n-1<p\leq -n+1$ (a short proof of this is also given in \cite{Ivaki-Proc}) or when $\varphi$ is even (e.q., $\varphi(u)=\varphi(-u)$) and $-n+1<p<1.$ See also \cite{Andrews 1999,AGN, GN, U1, U2}.
+
+
+For convenience, in studying the flow we consider $\varphi = 1/g$. Consider a smooth, closed, strictly convex hypersurface $M_0$ in Euclidean space $\mathbb{R}^{n+1}$ given by a smooth embedding $F_0:M\to \mathbb{R}^{n+1}.$ Suppose the origin is in the interior of the region enclosed by $M_0.$ We study the long-time behavior of a family of hypersurfaces $\{M_t\}$ given by smooth maps $F:M\times [0,T)\to \mathbb{R}^{n+1}$ satisfying the initial value problem
 \begin{equation}\label{e: flow0}
  \partial_{t}F(x,t)=\varphi(\nu(x,t))\frac{(F(x,t)\cdot \nu (x,t))^{2-p}}{\mathcal{K}(x,t)} \nu(x,t),\quad
  F(\cdot,0)=F_{0}(\cdot).
@@ -79,7 +84,7 @@ For $p=2,~\varphi\equiv1$, flow (\ref{e: flow0}) was studied by Schn\"{u}rer \ci
 
 Let us set
 $\tilde{K_t}=(V(B)/V(K_t))^{1/(n+1)}K_t,$ where $K_t$ denotes the convex body enclosed by $M_t$ and $V(K_t)$ is the $(n+1)$-dimensional Lebesugue measure of $K_t.$ The following theorem was proved in \cite{Ivaki 2014-gauss} regarding the case $p=-n-1,~\varphi\equiv1$ (in this case the flow belonges to a family of centro-affine normal flows introduced by Stancu in \cite{Alina 2012}):
-\begin{thmmain}
+\begin{thmmain}[\cite{Ivaki 2014-gauss}]
 Let $n\ge2,$ $p=-n-1,~\varphi\equiv1$ and suppose $K_0$ has its Santal\'{o} point at the origin, e.q., $\int_{\mathbb{S}^{n}}\frac{u}{h_{K_0}(u)^{n+2}}d\sigma(u)=0$. Then there exists a unique solution $\{K_t\}$ of flow (\ref{e: flow0}), such that $\tilde{K}_t$ converges in $C^{\infty}$ to an origin-centered ellipsoid.
 \end{thmmain}
 Here $h_{K_0}$ is the support function of $K_0.$ A closed, convex hypersurface $M_0$ can be described in terms of its support function $h_{K_0}:\mathbb{S}^n\to\mathbb{R}$ defined by
@@ -96,9 +101,8 @@ A homothetic self-similar solution of this flow satisfies
 \begin{align} \label{def: self similar}
 h^{1-p} \det (\bar{\nabla}^2 h + \operatorname{Id}h)=\frac{c}{\varphi},
 \end{align}
-for some positive constant $c.$ Here $\bar{\nabla}$ is the covariant derivative on $\mathbb{S}^{n}$ endowed with an orthonormal frame. Note that $S_{n}=\det (\bar{\nabla}^2 h + \operatorname{Id}h).$
-The $L_p$-Minkowski problem in the smooth category asks when for a positive, smooth function $\varphi$ on the unit sphere, there is a smooth, closed, strictly convex hypersurface that solves (\ref{def: self similar})?
-The existence and regularity of solutions to the $L_p$-Minkowski problem are discussed in \cite{39} for $p > −n-1$; however, the methods used in \cite{39} vary significantly depending on $p$. Our study on (\ref{e: flow0}) is motivated by the search for a variational proof (based on curvature flow) of the $L_p$-Minkowski problem. For $p=1$, Chou-Wang \cite{Chou Wang 2000} treated the classical $L_1$-Minkowki problem in the smooth category by a logarithmic Gauss curvature flow.   For $n=1$, and $p\neq 1>-3$, the existence of solutions to the $L_p$-Minkowski problems follows from Andrews' results \cite{Andrews 1998} on the asymptotic behavior of a family of contracting and expanding flows of curves. Also, in higher dimensions, the existence of solutions to the $L_p$-Minkowski problems follows from \cite{Andrews Ben 2000} when $-n-1<p\leq -n+1$ (a short proof of this is also given in \cite{Ivaki-Proc}) or when $\varphi$ is even (e.q., $\varphi(u)=\varphi(-u)$) and $-n+1<p<1.$ See also \cite{Andrews 1999,AGN, GN, U1, U2}.
+for some positive constant $c.$ Here $\bar{\nabla}$ is the covariant derivative on $\mathbb{S}^{n}$ endowed with an orthonormal frame. Note that $S_{n}=\det (\bar{\nabla}^2 h + \operatorname{Id}h).$  Thus self-similar solutions to the flow \eqref{e: flow0} are precisely solutions of the $L_p$-Minkowksi problem, \eqref{e:lp}. To obtain such solutions we prove the following theorems:
+
 \begin{theorem}
 Let $-n-1<p<\infty$ and $\varphi$ be a positive, smooth even function on $\mathbb{S}^{n}$ i.e., $\varphi(u)=\varphi(-u)$. Suppose $K_0$ is origin-symmetric. There exists a unique origin-symmetric solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a smooth, origin-symmetric, strictly convex solution of (\ref{def: self similar}). Also, when $p\leq n+1$ the convergence is in $C^{\infty}$, and if $p\ge 1$ the convergence holds for the full sequence.
 \end{theorem}
@@ -111,7 +115,8 @@ Let $p\neq 1>-n-1,~\varphi\equiv 1$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\fra
 \begin{remark}
 In the previous theorem, in some other cases than $p\ge 1$, it is known that the limiting shape is the unit ball. See, for example, \cite{Andrews 1999, andrewschen}.
 \end{remark}
-The main difficulty to prove the convergence of the normalized solutions is the long-time existence issue. Once it is proved that solutions to the flow exist until they expand to infinity uniformly in all directions, the method of \cite[Section 8]{Ivaki 2014-gauss} applies and yields the convergence of the volume-normalized solutions in $C^{1}$ to self-similar solutions provided $p\neq1$. Further work is required to establish the convergence of the normalized solutions when $p=1$ and to prove the convergence in $C^{\infty}$ if $p\leq n+1$; this is accomplished in Section \ref{sec: nor conv}; see also Remark \ref{rem}.
+
+The main difficulty to prove the convergence of the normalized solutions is the long-time existence issue. To prove long time existence, we first obtain bounds on the Gauss curvature in section \ref{subsec:gauss-curvature-bounds} using the standard technique of \cite{Tso} to obtain upper bounds, with lower bounds obtained by applying the same technique to evolution of the polar body, as in \cite{Ivaki-Proc}.  Controlling the principal curvatures requires estimates of higher derivatives of the speed which is generally quite difficult due to the non-linearity of the flow. In section \ref{subsec:principal-curvature-bounds} we obtain these crucial estimates by adapting the $C^2$ estimates of Guan-Ren-Wang for the prescribed curvature problem see \cite[(4.2)]{Guan}, and long time existence follows readily by standard arguments. Once it is proved that solutions to the flow exist until they expand to infinity uniformly in all directions, the method of \cite[Section 8]{Ivaki 2014-gauss} applies and yields the convergence of the volume-normalized solutions in $C^{1}$ to self-similar solutions provided $p\neq1$. Further work is required to establish the convergence of the normalized solutions when $p=1$ and to prove the convergence in $C^{\infty}$ if $p\leq n+1$; this is accomplished in Section \ref{sec: nor conv}; see also Remark \ref{rem}.
 %\begin{theorem}\label{thm: 3}
 %Let $p>1,$ and $K_0\in\mathcal{F}_0^{n+1}$ satisfy $\int_{\mathbb{S}^{n}}\frac{z}{\varphi(z)u_{K_0}(z)^{1-p}}d\sigma(z)=0$. Then there exists a unique solution $\{K_t\}\subset \mathcal{F}_0^{n+1} $ of flow (\ref{eq: flow4}) such that $\{\tilde{K}_t\}$ converges in Hausdorff topology to a convex body $\tilde{K}_{\infty}\in\mathcal{K}^{n+1}$ that may have the origin of on its boundary and is the unique solution of the $L_p$-Minkowski problem.
 %\end{theorem}
@@ -161,8 +166,12 @@ Set $\Phi=-r^{-n}$, $S=\mathcal{K}^{\frac{1}{n}}$ and $\psi(x)=h^{2-p}(x)\varphi
 %\partial_t\|F\|^2=\psi\dot{\Phi}S^{ij}\|F\|^2_{;ij}-2h\psi\dot{\Phi}S^{ij}g_{ij}+2\psi(\dot{\Phi}S-\Phi)h.
 %\end{align*}
 \end{lemma}
+
 \section{long-time existence}
+\label{sec:long-time-existence}
+
 \subsection{Lower and upper bounds on Gauss curvature}
+\label{subsec:gauss-curvature-bounds}
 The proofs of the following two lemmas are similar to the proofs of \cite[ Lemmas 4.1, 4.2]{Ivaki-Proc}. For completeness, we give the proofs here.
 
 
@@ -282,6 +291,8 @@ The lower bound for $\mathcal{K}$ on $[0,\delta]$ for a small enough $\delta>0$ 
 \end{proof}
 
 \subsection{Upper and lower bounds on principal curvatures}
+\label{subsec:principal-curvature-bounds}
+
  To obtain upper and lower bounds on the principal curvatures, we will consider the test function used by Guan-Ren-Wang for a prescribed curvature problem; see \cite[(4.2)]{Guan}.
 \begin{lemma}\label{lem: final}
 Let $\{K_t\}$ be a solution of (\ref{e: flow0}) on $[0,t_1]$. If $c_1\leq h_{K_t}\leq c_2$ on $[0,t_1]$, then $c_5\leq \kappa_i\le c_6$ on $[0,t_1],$ where $c_5$ and $c_6$ depend on $K_0,$
@@ -602,6 +613,7 @@ In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1
 \bibitem{s2}A. Stancu, ``On the number of solutions to the discrete two-dimensional $L_0$-Minkowski problem." Adv. in Math. 180(2003): 290--323.
 \bibitem{104} A. Stancu, ``The discrete planar $L_0$-Minkowski problem." Adv. in Math. 167(2002): 160--174.
 \bibitem{Alina 2012} A. Stancu, ``Centro-affine invariants for smooth convex bodies."  Int. Math. Res. Not. IMRN 2012(2012): 2289--2320.
+\bibitem{Tso} Tso, Kaising ``Deforming a hypersurface by its {G}auss-{K}ronecker curvature'' Comm. Pure Appl. Math 38 No. 6 (1985): 867--882.
 \bibitem{Krylov-Safonov} N.V Krylov, and M.V. Safonov, ``Certain properties of parabolic equations with measurable coefficients." Izv. Akad. Nauk SSSR Ser. Mat. 40(1981): 161--175; English transl., Math. USSR Izv. 16(1981): 151--164.
 \bibitem {Oliver 2006} O. Schn\"{u}rer, ``Surfaces expanding by the inverse Gauss curvature flow."  J. Reine Angew. Math. 600(2006): 117--134.
 \bibitem{Tsai 2005} D.H. Tsai, ``Behavior of the gradient for solutions of parabolic equations on the circle." Calc. Var. Partial Differential Equations 23(2005): 251--270.
