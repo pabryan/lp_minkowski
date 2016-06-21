@@ -341,20 +341,20 @@ Combining  (\ref{eq: 1}) and (\ref{eq: 3}) and taking $\varepsilon>0$ small enou
 +\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}(\sum_j\kappa_jw_{jj;i})^2\\
 &+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
 &+\frac{\psi w_{ll}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;l}w_{qq;l}-\mathcal{K}^{pp,qq}w_{pq;l}^2
--(2-\varepsilon)\frac{(\mathcal{K})_l^2}{\mathcal{K}}\right)\\
+-(2-\varepsilon)\frac{(\nabla_l\mathcal{K})^2}{\mathcal{K}}\right)\\
 &+\frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &+(n-1)\frac{\alpha\psi\mathcal{K}}{h}+\frac{\alpha\mathcal{K}}{h}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)+\frac{\alpha\mathcal{K}}{h}\sum_i\kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &-\frac{\alpha\psi}{h^2}\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2 -\alpha\psi\mathcal{K}^{ii}w_{ii}^2\\
 \leq&\frac{\psi}{\|W\|^2}\left(\sum_l\kappa_l\left(C+C\kappa_l^2+\frac{(\beta
--2+\varepsilon)(\mathcal{K})_l^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
+-2+\varepsilon)(\nabla_l\mathcal{K})^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
 &+\alpha\psi\left(\frac{n\mathcal{K}}{h}-\mathcal{K}^{ii}w_{ii}^2-\frac{\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2}{h^2}+\frac{\mathcal{K}}{h\psi}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)\right)\\
 &-\psi\sum_i\left(A_i+B_i+C_i+D_i-E_i\right)
 -\frac{\alpha\psi\mathcal{K}}{h}-\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2},
 \end{split}\end{align}
 where
-\[A_i=\frac{1}{\|W\|^2\mathcal{K}}\beta w_{ii}(\mathcal{K})^2_i-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
+\[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\nabla_i\mathcal{K})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
 
-\[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
+\[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
 
 \[D_i=\frac{1}{\|W\|^2}\mathcal{K}^{ii}\sum_j w_{jj;i}^2,\quad
 E_i=\frac{2}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j w_{jj}w_{jj;i}\right)^2.\]
@@ -512,12 +512,12 @@ Replacing $r$ by $1/h^{\ast}$ and taking into account (\textbf{b}) finishes the 
 \end{proof}
 In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}. For any $\delta>0$ and $1\leq l<n$ we have
 \begin{align*}
--&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\mathcal{K})_i^2}{\mathcal{K}}\geq \\
+-&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}\geq \\
 &\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
 \end{align*}
 In particular, by taking $\delta=\frac{1}{2-\varepsilon}$ , we have
 \begin{align}\label{key ineq}
-(2-\varepsilon)\frac{(\mathcal{K})_i^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
+(2-\varepsilon)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
 \end{align}
 
 \begin{lemma}\label{app2}
@@ -528,13 +528,15 @@ For each $i\ne 1,$ if $\sqrt{3}\kappa_i\leq \kappa_1,$ we have
 Note that by setting $l=1$ in (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ is similar to the proof of \cite[Lemma 4.2]{Guan}.
 \end{proof}
 \begin{lemma}\label{app3}
-For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\ge 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$ such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
+For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$ such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad \text{for}~i=1,\cdots,n.\]
 \end{lemma}
 \begin{proof}
 In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}$.
 \end{proof}
+
 \section*{Acknowledgment}
+
 \bibliographystyle{amsplain}
 \begin{thebibliography}{10}
 \bibitem{1}J. Ai, K.S. Chou, and J. Wei, ``Self-similar solutions for the anisotropic affine curve shortening problem." Calc. Var. Partial Differential Equations 13(2001): 311--337.
