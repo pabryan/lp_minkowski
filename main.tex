@@ -152,18 +152,17 @@ Note that in above we considered the support function as a function on the bound
 $$h(x)=F(x)\cdot \nu(x).$$
 
 
-Set $\Phi=-r^{-n}$, $S=\mathcal{K}^{\frac{1}{n}}$ and $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolution equations are standard; see, for example, \cite{Gerhardt:/2006}.
+For convenience, let $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolution equations are standard; see, for example, \cite{Gerhardt:/2006}.
 \begin{lemma} The following evolution equations hold:
-\[\partial_t \nu = \nabla \psi\Phi,\]
-\[\partial_t w_i^j=(\psi\Phi)_{;ij}+\psi\Phi w_i^kw_k^j,\]
+\[\partial_t \nu = \nabla \left(\frac{\psi}{\mathcal{K}}\right),\]
 \begin{align*}
-\partial_tw_i^j=&\psi\dot{\Phi}S^{kl}w_{i;kl}^j+\psi\dot{\Phi}S^{kl}w_{kr}w_l^rw_i^j+\psi(\Phi-\dot{\Phi}S)w_{i}^kw_k^{j}+\psi\ddot{\Phi} S_{;i} g^{jk}S_{;k}\\
-&+\psi\dot{\Phi}S^{kl,rs} w_{kl;i}g^{jk}w_{rs;k} + \psi_{;i}g^{jk}\Phi_{;k} + g^{jk}\psi_{;k} \Phi_{i} + \Phi g^{jk}\psi_{;ij},
+\partial_t w_i^j &= \left(\frac{\psi}{\mathcal{K}}\right)_{;ij} + \left(\frac{\psi}{\mathcal{K}}\right) w_i^kw_k^j \\
+&= \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;kl}^j + \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^rw_i^j +(n+1)\psi \frac{1}{\mathcal{K}} w_{i}^k w_k^{j} \\
+&\quad - \frac{2\psi}{\mathcal{K}^{3}} g^{jm} \mathcal{K}_{;i} \mathcal{K}_{;m} + \psi\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^{2}} w_{kl;i}g^{jm}w_{rs;m} \\
+&\quad - \psi_{;i} \frac{1}{\mathcal{K}^{2}} g^{jk} \mathcal{K}_{;k} - \psi_{;k} \frac{1}{\mathcal{K}^{2}} g^{jk} \mathcal{K}_{;i} + \frac{1}{\mathcal{K}} g^{jk}\psi_{;ij},
 \end{align*}
 \begin{align*}
-\partial_th=&\psi\dot{\Phi}S^{ij}h_{;ij}
-+\psi h\dot{\Phi}S^{ij}w_i^lw_{jl}
--\psi(\Phi+\dot{\Phi}S)+\Phi F\cdot\nabla\psi.
+\partial_th &= \psi \frac{\mathcal{K}^{ij}}{\mathcal{K}^{2}} h_{;ij} + \psi h \frac{\mathcal{K}^{ij}}{\mathcal{K}^{2}} w_i^lw_{jl} + (n-1) \psi \frac{1}{\mathcal{K}}+ \frac{1}{\mathcal{K}} F\cdot\nabla\psi.
 \end{align*}
 %\begin{align*}
 %\partial_t\|F\|^2=\psi\dot{\Phi}S^{ij}\|F\|^2_{;ij}-2h\psi\dot{\Phi}S^{ij}g_{ij}+2\psi(\dot{\Phi}S-\Phi)h.
