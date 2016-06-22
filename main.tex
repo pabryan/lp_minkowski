@@ -127,7 +127,10 @@ The main difficulty to prove the convergence of the normalized solutions is the 
 %If $-n-1<p\leq -n,$ for a given $\varphi$ and $K$, a Euclidean translation of $K$, $K+v$, satisfies $\int_{\mathbb{S}^{n}}\frac{z}{\varphi(z)u_{K+v}(z)^{1-p}}d\sigma(z)=0.$
 %Regarding the case $p>1,$ if $\varphi^{1/(p-1)}$ is the support function of some smooth, strictly convex body then we may choose $K_0$ to be the corresponding convex body so that $\int_{\mathbb{S}^{n}}\frac{z}{\varphi(z)u_{K_0}(z)^{1-p}}d\sigma(z)=0.$
 %\end{remark}
+
+
 \section{basic evolution equations}
+
 Let $g=\{g_{ij}\}$, and $W=\{w_{ij}\}$ denote, in order, the induced metric and the second fundamental form of $M$. At every point in the hypersurface $M$ choose a local orthonormal frame $\{e_1,\cdots, e_n\}.$
 
 We use the following standard notation
@@ -137,12 +140,12 @@ We use the following standard notation
 Here, $\{g^{ij}\}$ is the inverse matrix of $\{g_{ij}\}.$
 
 
-The following geometric formulas are well-known
+We use semicolons to denote covariant derivatives. The following geometric formulas are well-known:
 \begin{align*}
-\nabla_i\nu&=w_i^ke_k,\\
-\nu_{;ij}&=\nabla_kw_{ij}e_k-w_i^lw_{lj}\nu,\\
-\nabla_ih&=w_i^k(F\cdot e_k),\\
-h_{;ij}&=w_{ij}-hw_i^lw_{lj}+F\cdot\nabla w_{ij}.\\
+\nu_{;i} &= w_i^ke_k,\\
+\nu_{;ij} &= g^{kl}w_{ij;l}e_k - w_i^lw_{lj}\nu,\\
+h_{;i} &= w_i^k (F\cdot e_k),\\
+h_{;ij} &= w_{ij} - hw_i^lw_{lj} + F \cdot \nabla w_{ij}.\\
 %\|F\|^2_{;ij}&=2g_{ij}-2w_{ij}h.
 \end{align*}
 Note that in above we considered the support function as a function on the boundary of the hyperspace; that is, at the point $x\in M$ we have
@@ -151,11 +154,11 @@ $$h(x)=F(x)\cdot \nu(x).$$
 
 Set $\Phi=-r^{-n}$, $S=\mathcal{K}^{\frac{1}{n}}$ and $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolution equations are standard; see, for example, \cite{Gerhardt:/2006}.
 \begin{lemma} The following evolution equations hold:
-\[\partial_t\nu=\nabla \psi\Phi,\]
+\[\partial_t \nu = \nabla \psi\Phi,\]
 \[\partial_t w_i^j=(\psi\Phi)_{;ij}+\psi\Phi w_i^kw_k^j,\]
 \begin{align*}
-\partial_tw_i^j=&\psi\dot{\Phi}S^{kl}w_{i;kl}^j+\psi\dot{\Phi}S^{kl}w_{kr}w_l^rw_i^j+\psi(\Phi-\dot{\Phi}S)w_{i}^kw_k^{j}+\psi\ddot{\Phi}\nabla_iS\nabla^jS\\
-&+\psi\dot{\Phi}S^{kl,rs}\nabla_iw_{kl}\nabla^jw_{rs}+\nabla_i\psi\nabla^j\Phi+\nabla^j\psi\nabla_i\Phi+\Phi\nabla_i\nabla^j\psi,
+\partial_tw_i^j=&\psi\dot{\Phi}S^{kl}w_{i;kl}^j+\psi\dot{\Phi}S^{kl}w_{kr}w_l^rw_i^j+\psi(\Phi-\dot{\Phi}S)w_{i}^kw_k^{j}+\psi\ddot{\Phi} S_{;i} g^{jk}S_{;k}\\
+&+\psi\dot{\Phi}S^{kl,rs} w_{kl;i}g^{jk}w_{rs;k} + \psi_{;i}g^{jk}\Phi_{;k} + g^{jk}\psi_{;k} \Phi_{i} + \Phi g^{jk}\psi_{;ij},
 \end{align*}
 \begin{align*}
 \partial_th=&\psi\dot{\Phi}S^{ij}h_{;ij}
@@ -172,7 +175,8 @@ Set $\Phi=-r^{-n}$, $S=\mathcal{K}^{\frac{1}{n}}$ and $\psi(x)=h^{2-p}(x)\varphi
 
 \subsection{Lower and upper bounds on Gauss curvature}
 \label{subsec:gauss-curvature-bounds}
-The proofs of the following two lemmas are similar to the proofs of \cite[ Lemmas 4.1, 4.2]{Ivaki-Proc}. For completeness, we give the proofs here.
+
+The proofs of the following two lemmas are similar to the proofs of \cite[ Lemmas 4.1, 4.2]{Ivaki-Proc}. For completeness, we give the proofs here. In this section only we use $\bar{\nabla}$ to denote covariant derivatives on the sphere with respect to the standard metric.
 
 
 The matrix of the radii of the curvature of a smooth, closed, strictly convex hypersurface is denoted by $\mathfrak{r}=[\mathfrak{r}_{ij}]$ and the entries of $\mathfrak{r}$ are considered as functions on the unit sphere. They can be expressed in terms of the support function as $\mathfrak{r}_{ij}:=\bar{\nabla}_i\bar{\nabla}_j h+\bar{g}_{ij}h,$ where $[\bar{g}_{ij}]$ is the standard metric on $\mathbb{S}^{n}$. Additionally, we recall that
