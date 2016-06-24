@@ -308,10 +308,10 @@ Using the parabolic maximum principle we show that for some $\alpha$ large enoug
 is given by
 \begin{align*}
 \dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl}=&-\frac{\psi}{\|W\|^2}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\nabla_kw_i^j\nabla_lw_j^i
-+\frac{2\psi}{\|W\|^4}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w^j_ih^s_r\nabla_kw^i_j \nabla_lw^r_{s}\\
++\frac{2\psi}{\|W\|^4}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w^j_iw^s_r\nabla_kw^i_j \nabla_lw^r_{s}\\
 &+\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w_{kr}w_l^r-\psi(n+1)\frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2}\\
 &+\frac{\psi w^i_j}{\|W\|^2}\left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2}\nabla_iw_{kl}\nabla^jw_{rs}-2\frac{\nabla_i\mathcal{K}\nabla^j\mathcal{K}}{\mathcal{K}^3}\right)\\
-&+(\frac{2}{\mathcal{K}^2}\nabla_i\psi\nabla^j\mathcal{K}-\frac{1}{\mathcal{K}}\nabla_i\nabla^j\psi)\frac{w^i_j}{\|W\|^2}\\
+&+\left(\frac{2}{\mathcal{K}^2}\nabla_i\psi\nabla^j\mathcal{K}-\frac{1}{\mathcal{K}}\nabla_i\nabla^j\psi\right)\frac{w^i_j}{\|W\|^2}\\
 &+(n-1)\frac{\alpha\psi}{h\mathcal{K}}+\frac{\alpha}{h\mathcal{K}}(F\cdot\nabla\psi)\\
 &-\frac{\alpha\psi}{h^2}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\nabla_kh\nabla_lh
 -\alpha\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w_{kr}w_l^r.
@@ -319,7 +319,7 @@ is given by
 Since in any orthonormal frame $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ at a point $(x_0,t_0)$ with $t_0>0$ that for the first time $\Theta(x_0,t_0)=0$ we obtain
 \begin{align*}
 0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
-+\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}(\sum_j\kappa_jw_{jj;i})^2\\
++\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
 &+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
 &+\frac{\psi w_{ii}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}-\mathcal{K}^{pp,qq}w_{pq;i}^2
 -2\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}\right)\\
@@ -333,7 +333,7 @@ Also, at $(x_0,t_0)$ we have
 \end{equation}
 We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ Therefore,
 \begin{equation}\label{eq: max1}
-\Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{n}\leq \kappa_1\leq c_2^{\alpha}.
+\Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{\sqrt{n}}\leq \kappa_1\leq c_2^{\alpha}.
 \end{equation}
 On the other hand, since $\psi$ is bounded below in view of our assumptions:
 \begin{equation}\label{eq: 1}
@@ -347,7 +347,7 @@ and
 Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 \begin{align}\label{eq: 3}
 -\frac{\mathcal{K}}{\|W\|^2}\sum_i\kappa_i\nabla_i\nabla_i\psi&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2-w_{ii;k}d_{\nu}\psi(\partial_k))\nonumber\\
-&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \nabla_k hd_{\nu}\psi(\partial_k)\nonumber\\
+&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_k \nabla_k hd_{\nu}\psi(\partial_k)\nonumber\\
 &=\frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\nonumber\\
 &\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i).
 \end{align}
@@ -357,7 +357,7 @@ To get the last inequality, we used that $\mathcal{K}$ is bounded above and $\ps
 Combining  (\ref{eq: 1}) and (\ref{eq: 3}) and taking $\varepsilon>0$ small enough implies that
 \begin{align}\begin{split}\label{eq:L10-1}
 0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
-+\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}(\sum_j\kappa_jw_{jj;i})^2\\
++\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
 &+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
 &+\frac{\psi w_{ll}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;l}w_{qq;l}-\mathcal{K}^{pp,qq}w_{pq;l}^2
 -(2-\varepsilon)\frac{(\nabla_l\mathcal{K})^2}{\mathcal{K}}\right)\\
@@ -389,9 +389,16 @@ The third line of \eqref{eq:L10-1} arises from
 see, for example, \cite[Lemma~2.1.14]{Gerhardt:/2006} for this relation. Since the second term in the bracket is negative and the hypersurface is convex, we can proceed in the same way as we derived $C_i$ and just throw away all indices $i$ which are neither $p$ or $q$. This gives term $B_i$. The first term in the big bracket goes into $A_i$.
 
 
-Take $\beta=2-\varepsilon$. In view of Lemmas \ref{app2}, \ref{app3},  (\ref{eq:L10-1}) reads
+In Corollary \ref{Alternative} of the appendix we will present the method developed in \cite{Guan} to prove that by taking $\beta=2-\varepsilon$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
+\[\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n\]
+or 
+\[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
+By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contradiction to the bound on the Gauss curvature. In the second case \eqref{eq:L10-1} yields
+
+
 \[0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
 +C(\alpha).\]
+
 Take $\alpha$ such that $ (\alpha-1) \mathcal{K}\geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
 \begin{align}\label{x}
 0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
@@ -529,15 +536,27 @@ Now we calculate
 \end{align*}
 Replacing $r$ by $1/h^{\ast}$ and taking into account (\textbf{b}) finishes the proof.
 \end{proof}
-In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}. For any $\delta>0$ and $1\leq l<n$ we have
+
+\subsection*{Estimates for curvature derivatives}
+For convenience we present some of the main ideas, how one can prove the alternative in Lemma \ref{lem: final} about balancing the curvature derivatives. This method was used in \cite{Guan} for a similar stationary prescribed curvature equation.
+In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}, which can be deduced easily by differentiating 
+\[\log G=\log \left(\frac{\sigma_k}{\sigma_l}\right)^{\frac{1}{k-l}}\] twice, using the concavity of $G$ and applying the Schwartz inequality.
+For any $\delta>0$ and $1\leq l<n$ we have
 \begin{align*}
 -&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}\geq \\
 &\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
 \end{align*}
 In particular, by taking $\delta=\frac{1}{2-\varepsilon}$ , we have
-\begin{align}\label{key ineq}
-(2-\varepsilon)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
-\end{align}
+\begin{align}\begin{split}\label{key ineq}
+(2-\varepsilon)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}\\
+					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
+\end{split}\end{align}
+
+
+
+\begin{remark}
+Note that the term $A_i$ looks slightly different from the term $A_i$ in \cite{Guan}, where the $\mathcal{K}$ is not present in the denominator. We have to define $A_i$ in the way we did, because due to the inverse nature of the curvature flow equation we obtain an extra good derivative term, into which we can absorb the $\beta$-part of $A_i$, if it is not too large. Fortunately the proofs of \cite[Lemma~4.2, Lemma~4.3]{Guan} also work for some $\beta<2$ as we will indicate shortly.
+\end{remark}
 
 \begin{lemma}\label{app2}
 For each $i\ne 1,$ if $\sqrt{3}\kappa_i\leq \kappa_1,$ we have
@@ -546,6 +565,7 @@ For each $i\ne 1,$ if $\sqrt{3}\kappa_i\leq \kappa_1,$ we have
 \begin{proof}
 Note that by setting $l=1$ in (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ is similar to the proof of \cite[Lemma 4.2]{Guan}.
 \end{proof}
+
 \begin{lemma}\label{app3}
 For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$ such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad \text{for}~i=1,\cdots,n.\]
@@ -553,6 +573,17 @@ For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\
 \begin{proof}
 In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}$.
 \end{proof}
+
+\begin{corollary}\label{Alternative}
+There exist positive numbers $\delta_1,\dots,\delta_n,$ depending only on the dimension, such that either
+\begin{equation}
+\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n
+\end{equation}
+or
+\begin{equation}
+A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.
+\end{equation}
+\end{corollary}
 
 \section*{Acknowledgment}
 
