@@ -307,29 +307,24 @@ Assume, without loss of generality, that $c_1> 1;$ otherwise we replace $h$ by $
 Using the parabolic maximum principle we show that for some $\alpha$ large enough $\Theta(\cdot,t)$ is always negative on $[0,t_1]$. The evolution equation of $\Theta$
 is given by
 \begin{align*}
-\dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl}=&-\frac{\psi}{\|W\|^2}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\nabla_kw_i^j\nabla_lw_j^i
-+\frac{2\psi}{\|W\|^4}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w^j_iw^s_r\nabla_kw^i_j \nabla_lw^r_{s}\\
-&+\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w_{kr}w_l^r-\psi(n+1)\frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2}\\
-&+\frac{\psi w^i_j}{\|W\|^2}\left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2}\nabla_iw_{kl}\nabla^jw_{rs}-2\frac{\nabla_i\mathcal{K}\nabla^j\mathcal{K}}{\mathcal{K}^3}\right)\\
-&+\left(\frac{2}{\mathcal{K}^2}\nabla_i\psi\nabla^j\mathcal{K}-\frac{1}{\mathcal{K}}\nabla_i\nabla^j\psi\right)\frac{w^i_j}{\|W\|^2}\\
-&+(n-1)\frac{\alpha\psi}{h\mathcal{K}}+\frac{\alpha}{h\mathcal{K}}(F\cdot\nabla\psi)\\
-&-\frac{\alpha\psi}{h^2}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\nabla_kh\nabla_lh
--\alpha\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w_{kr}w_l^r.
+\dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl} =& -\frac{\psi}{\|W\|^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;k}^j w_{j;l}^i + \frac{2\psi}{\|W\|^4} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w^j_iw^s_r w^i_{j;k} w^r_{s;l} \\
+&+ \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r - \psi(n+1) \frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2} \\
+&+ \frac{\psi w^i_j}{\|W\|^2} \left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2} w_{kl;i} g^{jp}jw_{rs;p} - 2\frac{g^{jp} \mathcal{K}_{;i}\mathcal{K}_{;p}}{\mathcal{K}^3}\right) \\
+&+ \left(\frac{2}{\mathcal{K}^2} g^{jp}\psi_{;i} \mathcal{K}_{;j} - \frac{1}{\mathcal{K}} g^{jp} \psi_{;ip}\right) \frac{w^i_j}{\|W\|^2} \\
+& +(n-1) \frac{\alpha\psi}{h\mathcal{K}} + \frac{\alpha}{h\mathcal{K}} (F\cdot\nabla\psi) \\
+&- \frac{\alpha\psi}{h^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} h_{;k}h_{;l} - \alpha\psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r.
 \end{align*}
 Since in any orthonormal frame $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ at a point $(x_0,t_0)$ with $t_0>0$ that for the first time $\Theta(x_0,t_0)=0$ we obtain
 \begin{align*}
-0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
-+\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
-&+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
-&+\frac{\psi w_{ii}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}-\mathcal{K}^{pp,qq}w_{pq;i}^2
--2\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}\right)\\
-&+(2\nabla_i\psi\nabla_i\mathcal{K}-\mathcal{K}\nabla_i\nabla_i\psi)\frac{w_{ii}}{\|W\|^2}\\
-&+(n-1)\frac{\alpha\psi\mathcal{K}}{h}+\frac{\alpha\mathcal{K}}{h}(F\cdot\nabla\psi)-\frac{\alpha\psi}{h^2}\mathcal{K}^{kl}\nabla_kh\nabla_lh
--\alpha\psi\mathcal{K}^{ii}w_{ii}^2.
+0 \leq& -\frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_lw_{ll;i}^2 - \frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_{p\ne q}w_{pq;i}^2 + \frac{2\psi}{\|W\|^4} \mathcal{K}^{ii} \left(\sum_j\kappa_jw_{jj;i}\right)^2 \\
+&+ \psi\mathcal{K}^{ii} w_{ii}^2 - \psi(n+1) \mathcal{K} \sum_i\frac{w_{ii}^3}{\|W\|^2} \\
+&+ \frac{\psi w_{ii}}{\|W\|^2} \left(\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i} - \mathcal{K}^{pp,qq}w_{pq;i}^2 - 2\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\right) \\
+&+ (2\psi_{;i}\mathcal{K}_{;i} - \mathcal{K}\psi_{;ii}) \frac{w_{ii}}{\|W\|^2} \\
+&+ (n-1) \frac{\alpha\psi\mathcal{K}}{h} + \frac{\alpha\mathcal{K}}{h}(F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2}\mathcal{K}^{kl} h_{;k} h_{;l} - \alpha\psi\mathcal{K}^{ii}w_{ii}^2.
 \end{align*}
 Also, at $(x_0,t_0)$ we have
 \begin{equation}\label{eq: max}
-0=\nabla_k\Theta=\frac{\kappa_iw_{ii;k}}{\|W\|^2}-\alpha\frac{\nabla_k h}{h},
+0 = \Theta_{;k} = \frac{\kappa_iw_{ii;k}}{\|W\|^2} - \alpha\frac{h_{;k}}{h},
 \end{equation}
 We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ Therefore,
 \begin{equation}\label{eq: max1}
@@ -337,17 +332,17 @@ We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ The
 \end{equation}
 On the other hand, since $\psi$ is bounded below in view of our assumptions:
 \begin{equation}\label{eq: 1}
-\nabla_i\psi\leq C\kappa_i\Rightarrow \nabla_i\psi\nabla_i\mathcal{K}\leq \frac{\varepsilon}{2c_4} (\nabla_i\mathcal{K})^2+C\frac{\psi\kappa_i^2}{\varepsilon},
+\psi_{;i} \leq C\kappa_i \Rightarrow \psi_{;i} \mathcal{K}_{;i} \leq \frac{\varepsilon}{2c_4} (\mathcal{K}_{;i})^2 + C\frac{\psi\kappa_i^2}{\varepsilon},
 \end{equation}
 where $c_4$ is from Lemma \ref{lem: lower},
 and
 \begin{equation}\label{eq: 2}
-\nabla_i\nabla_i\psi\geq -C-C\kappa_i-C\kappa_i^2+w_{ii;k}d_{\nu}\psi(\partial_k).
+\psi_{;ii} \geq - C - C\kappa_i - C\kappa_i^2 + w_{ii;k} d_{\nu} \psi(\partial_k).
 \end{equation}
 Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 \begin{align}\label{eq: 3}
--\frac{\mathcal{K}}{\|W\|^2}\sum_i\kappa_i\nabla_i\nabla_i\psi&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2-w_{ii;k}d_{\nu}\psi(\partial_k))\nonumber\\
-&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_k \nabla_k hd_{\nu}\psi(\partial_k)\nonumber\\
+-\frac{\mathcal{K}}{\|W\|^2}\sum_i\kappa_i \psi_{;ii}&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2-w_{ii;k}d_{\nu}\psi(\partial_k))\nonumber\\
+&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h} \sum_k h_{;k} d_{\nu}\psi(\partial_k)\nonumber\\
 &=\frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\nonumber\\
 &\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i).
 \end{align}
@@ -360,18 +355,18 @@ Combining  (\ref{eq: 1}) and (\ref{eq: 3}) and taking $\varepsilon>0$ small enou
 +\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
 &+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
 &+\frac{\psi w_{ll}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;l}w_{qq;l}-\mathcal{K}^{pp,qq}w_{pq;l}^2
--(2-\varepsilon)\frac{(\nabla_l\mathcal{K})^2}{\mathcal{K}}\right)\\
+-(2-\varepsilon)\frac{(\mathcal{K}_{;l})^2}{\mathcal{K}}\right)\\
 &+\frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &+(n-1)\frac{\alpha\psi\mathcal{K}}{h}+\frac{\alpha\mathcal{K}}{h}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)+\frac{\alpha\mathcal{K}}{h}\sum_i\kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &-\frac{\alpha\psi}{h^2}\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2 -\alpha\psi\mathcal{K}^{ii}w_{ii}^2\\
 \leq&\frac{\psi}{\|W\|^2}\left(\sum_l\kappa_l\left(C+C\kappa_l^2+\frac{(\beta
--2+\varepsilon)(\nabla_l\mathcal{K})^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
+-2+\varepsilon)(\mathcal{K}_{;l})^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
 &+\alpha\psi\left(\frac{n\mathcal{K}}{h}-\mathcal{K}^{ii}w_{ii}^2-\frac{\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2}{h^2}+\frac{\mathcal{K}}{h\psi}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)\right)\\
 &-\psi\sum_i\left(A_i+B_i+C_i+D_i-E_i\right)
 -\frac{\alpha\psi\mathcal{K}}{h}-\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2},
 \end{split}\end{align}
 where
-\[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\nabla_i\mathcal{K})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
+\[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
 
 \[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
 
@@ -543,12 +538,12 @@ In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of 
 \[\log G=\log \left(\frac{\sigma_k}{\sigma_l}\right)^{\frac{1}{k-l}}\] twice, using the concavity of $G$ and applying the Schwartz inequality.
 For any $\delta>0$ and $1\leq l<n$ we have
 \begin{align*}
--&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}\geq \\
+-&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\geq \\
 &\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
 \end{align*}
 In particular, by taking $\delta=\frac{1}{2-\varepsilon}$ , we have
 \begin{align}\begin{split}\label{key ineq}
-(2-\varepsilon)\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}\\
+(2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}\\
 					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
 \end{split}\end{align}
 
@@ -581,8 +576,8 @@ This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in t
 \end{split}\end{align}
 Now we need to estimate $A_i$, where we recall taking $\beta=2-\epsilon$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
 \begin{align}\begin{split}
-A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}(\nabla_i\sigma_n)^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
-		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n(\nabla_i\sigma_{\lambda})^2}{\sigma_{\lambda}^2}\\
+A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}((\sigma_n)_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
+		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n((\sigma_{\lambda})_{;i})^2}{\sigma_{\lambda}^2}\\
 					&\hphantom{=}-\frac{w_{ii}}{\|W\|^2}\frac{\sigma_n\sum_{p,q}\sigma_{\lambda}^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_{\lambda}}\\
                     &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\sum_{a}\sigma_{\lambda}^{aa}w_{aa;i}\\
                     	&\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\sum_{a\neq b}\sigma_\lambda^{aa}\sigma_{\lambda}^{bb}w_{aa;i}w_{bb;i}\\
