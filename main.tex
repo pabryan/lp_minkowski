@@ -402,7 +402,7 @@ By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contrad
 Take $\alpha$ such that $ (\alpha-1) \mathcal{K}\geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
 \begin{align}\label{x}
 0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
-+C(\alpha)\leq -\frac{c_1^{\alpha}}{n}+C(\alpha).\
++C(\alpha)\leq -\frac{c_1^{\alpha}}{\sqrt{n}}+C(\alpha).\
 \end{align}
 Since $C(\alpha)$ depends linearly on $\alpha$, taking $\alpha$ large enough yields a contradiction.
 \end{proof}
@@ -563,15 +563,33 @@ For each $i\ne 1,$ if $\sqrt{3}\kappa_i\leq \kappa_1,$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0.\]
 \end{lemma}
 \begin{proof}
-Note that by setting $l=1$ in (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ is similar to the proof of \cite[Lemma 4.2]{Guan}.
+Note that from (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ can literally be taken from \cite[Lemma 4.2]{Guan}, starting with \cite[equ.~(4.10)]{Guan}.
 \end{proof}
+
+In the following proof we will write $\sigma_n=\mathcal{K}$ for a better comparability with \cite[Lemma~4.3]{Guan}. Also denote by $\sigma_k(\kappa|i)$ the $k$-th elementary symmetric polynomial in the variables $\kappa_1,\dots,\kappa_{i-1},\kappa_{i+1},\dots,\kappa_n$ and $\sigma_k(\kappa|ij)$ accordingly.
+
 
 \begin{lemma}\label{app3}
 For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$ such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad \text{for}~i=1,\cdots,n.\]
 \end{lemma}
 \begin{proof}
-In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}$.
+This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in this proof. First of all, from the estimates in \cite[Lemma~4.2]{Guan} one can extract the following estimate:
+\begin{align}\begin{split}\label{app3-1}
+\|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;1}^2\\
+				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2 
+\end{split}\end{align}
+Now we need to estimate $A_i$, where we recall taking $\beta=2-\epsilon$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
+\begin{align}\begin{split}
+A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}(\nabla_i\sigma_n)^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
+		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n(\nabla_i\sigma_{\lambda})^2}{\sigma_{\lambda}^2}\\
+					&\hphantom{=}-\frac{w_{ii}}{\|W\|^2}\frac{\sigma_n\sum_{p,q}\sigma_{\lambda}^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_{\lambda}}\\
+                    &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\sum_{a}\sigma_{\lambda}^{aa}w_{aa;i}\\
+                    	&\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\sum_{a\neq b}\sigma_\lambda^{aa}\sigma_{\lambda}^{bb}w_{aa;i}w_{bb;i}\\
+                        &\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\sum_{a\neq b}\left(\sigma_{\lambda}^{aa}\sigma_{\lambda}^{bb}-\sigma_{\lambda}\sigma_{\lambda}^{aa,bb}\right)w_{aa;i}w_{bb;i}\Big].
+\end{split}\end{align}
+
+
 \end{proof}
 
 \begin{corollary}\label{Alternative}
