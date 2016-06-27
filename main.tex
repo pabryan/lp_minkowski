@@ -388,7 +388,7 @@ see, for example, \cite[Lemma~2.1.14]{Gerhardt:/2006} for this relation. Since t
 
 In Corollary \ref{Alternative} of the appendix we will present the method developed in \cite{Guan} to prove that by taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
 \[\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n\]
-or 
+or
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
 By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contradiction to the bound on the Gauss curvature. In the second case \eqref{eq:L10-1} yields
 
@@ -476,22 +476,23 @@ $f$ is continuous, and
 \]
 The claim follows.
 
-Next we obtain uniform lower and upper bounds on the principal curvatures of the normalized solution. We only consider the case $p<n+1.$
-For each $t\in [0,T)$ by the comparison principle we have
+Next we obtain uniform lower and upper bounds on the principal curvatures of the normalized solution.
+
+Consider the convex bodies $\tilde{K}_{\tau}:=\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1}{n+1}}K_t,$ where
+$$\tau(t):=\int_0^t \left(\frac{V(K_t)}{V(B)}\right)^{\frac{1+n-p}{n+1}}dt,\footnote{Suppose $p<n+1.$ For each $t\in [0,T)$ by the comparison principle we have
 \[\frac{(\max h_{K_t})^{p-n-1}}{(n+1-p)\max \varphi}\leq T-t\leq \frac{(\min h_{K_t})^{{p-n-1}}}{(n+1-p)\min \varphi}.\]
 Therefore, since $\frac{\max h_{K_t}}{\min h_{K_t}}\leq \frac{R}{r}$ (see (\ref{ratio})), we get
-\begin{align}\label{qq}
+\begin{align*}
 c_1(T-t)^{\frac{1}{p-n-1}}\leq \min h_{K_t} \leq \left(\frac{V(K_t)}{V(B)}\right)^{\frac{1}{n+1}}\leq \max h_{K_t}\leq c_2(T-t)^{\frac{1}{p-n-1}}.
-\end{align}
-Consider the convex bodies $\bar{K}_{\tau}=((n+1-p)(T-t))^{\frac{1}{n+1-p}}K_t,$ where
-$$\tau(t)=-\frac{\log(T-t)}{n+1-p}.$$
-Let us furnish all geometric quantities associated with $\bar{K}_{\tau}$ by an over-bar.
-The evolution equation of $\bar{h}_{\tau}$ is given by
-\[\partial_\tau \bar{h}_{\tau}=\varphi \bar{h}^{2-p}\bar{S}_n-\bar{h}.\]
-Applying the maximum principle to
-\[\Theta=\frac 12\log(\|\bar{W}\|^2)-\alpha\log \bar{h},\]
-and arguing as in the proof of Lemma \ref{lem: final}, we see that $\|\bar{W}\|$ has a uniform upper bound. This in turn, in view of (\ref{qq}) and our lower and upper bounds on the Gauss curvature of $\tilde{K}_t$, implies that we have uniform lower and upper bounds on the principal curvatures of $\tilde{K}_t$ (and of $\bar{K}_t$ ). Higher order regularity estimates and convergence in $C^{\infty}$ for subsequences of $\{\tilde{K}_{t}\}$ and $\{\bar{K}_{\tau}\}$ follow from Krylov-Safonov and standard parabolic theory and the Arzel\`{a}-Ascoli theorem\footnote{Note that since the time variable in $\{\bar{K}_{\tau}\}$ is
-$\tau(t)=-\frac{\log(T-t)}{n+1-p}$, we have exponential convergence for $\{\bar{K}_{\tau}\}$.}. The convergence for the full sequence when $p\geq 1$ follows from the uniqueness of the self-similar solutions to (\ref{def: self similar}); see \cite{Lu1,39}.
+\end{align*}
+Thus $\lim_{t\to T}\tau(t)=\infty.$}$$
+Let us furnish all geometric quantities associated with $\tilde{K}_{\tau}$ by an over-tilde.
+The evolution equation of $\tilde{h}_{\tau}$ is given by
+\[\partial_\tau \tilde{h}_{\tau}=\varphi \tilde{h}^{2-p}\tilde{S}_n-\frac{\int_{\mathbb{S}^{n}}\varphi \tilde{h}^{2-p}\tilde{S}_n^2d\sigma}{(n+1)V(B)}\tilde{h}.\]
+Since $\frac{\int_{\mathbb{S}^{n}}\varphi \tilde{h}^{2-p}\tilde{S}_n^2d\sigma}{(n+1)V(B)}$ is uniformly is bounded above,
+applying the maximum principle to
+$\Theta=\frac 12\log(\|\tilde{W}\|^2)-\alpha\log \tilde{h},$
+and arguing as in the proof of Lemma \ref{lem: final}, we see that $\|\tilde{W}\|$ has a uniform upper bound. This in turn, in view of our lower and upper bounds on the Gauss curvature of $\tilde{K}_{\tau}$, implies that we have uniform lower and upper bounds on the principal curvatures of $\tilde{K}_{\tau}$. Higher order regularity estimates and convergence in $C^{\infty}$ for a subsequence of $\{\tilde{K}_{\tau}\}$ follow from Krylov-Safonov and standard parabolic theory and the Arzel\`{a}-Ascoli theorem. The convergence for the full sequence when $p\geq 1$ follows from the uniqueness of the self-similar solutions to (\ref{def: self similar}); see \cite{Lu1,39}.
 \section{Appendix}\label{appendix}
 Let $K$ be a smooth, strictly convex body with the origin in its interior. Suppose $\partial K$, the boundary of $K,$ is parameterized with the radial function $r.$
 The metric $[g_{ij}]_{1\leq i,j\leq n-1}$, unit normal $\nu$, support function $h$, and the second fundamental form $[w_{ij}]_{1\leq i,j\leq n-1}$ of $\partial K$
@@ -536,7 +537,7 @@ Replacing $r$ by $1/h^{\ast}$ and taking into account (\textbf{b}) finishes the 
 
 \subsection*{Estimates for curvature derivatives}
 For convenience we present some of the main ideas, how one can prove the alternative in Lemma \ref{lem: final} about balancing the curvature derivatives. This method was used in \cite{Guan} for a similar stationary prescribed curvature equation.
-In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}, which can be deduced easily by differentiating 
+In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}, which can be deduced easily by differentiating
 \[\log G=\log \left(\frac{\sigma_k}{\sigma_l}\right)^{\frac{1}{k-l}}\] twice, using the concavity of $G$ and applying the Schwartz inequality.
 For any $\delta>0$ and $1\leq l<n$ we have
 \begin{align*}
@@ -574,7 +575,7 @@ For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\
 This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in this proof. First of all, from the estimates in \cite[Lemma~4.2]{Guan} one can extract the following estimate:
 \begin{align}\begin{split}\label{app3-1}
 \|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;1}^2\\
-				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2 
+				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2
 \end{split}\end{align}
 Now we need to estimate $A_i$, where we recall taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
 \begin{align}\begin{split}
