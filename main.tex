@@ -304,17 +304,16 @@ Let $\{K_t\}$ be a solution of (\ref{e: flow0}) on $[0,t_1]$. If $c_1\leq h_{K_t
 In view of Lemmas \ref{lem: lower} and \ref{lem: upper}, it suffices to show that $\|W\|$ remains bounded on $[0,t_1]$. Consider the test function
 \[\Theta=\frac 12\log(\|W\|^2)-\alpha\log h.\]
 Assume, without loss of generality, that $c_1> 1;$ otherwise we replace $h$ by $2h/c_1.$
-Using the parabolic maximum principle we show that for some $\alpha$ large enough $\Theta(\cdot,t)$ is always negative on $[0,t_1]$. The evolution equation of $\Theta$
-is given by
+Using the parabolic maximum principle we show that for some $\alpha$ large enough $\Theta(\cdot,t)$ is always negative on $[0,t_1]$. If the conclusion of the theorem is false, we may choose $(x_0,t_0)$ with $t_0>0$ and such that $\Theta(x_0,t_0)=0$, $\Theta(x, t_0) \leq 0$, and $\Theta(x,t) < 0$ for $t<t_0$. Then,
 \begin{align*}
-\dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl} =& -\frac{\psi}{\|W\|^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;k}^j w_{j;l}^i + \frac{2\psi}{\|W\|^4} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w^j_iw^s_r w^i_{j;k} w^r_{s;l} \\
+0 \leq& \dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl} \\
+&= -\frac{\psi}{\|W\|^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;k}^j w_{j;l}^i + \frac{2\psi}{\|W\|^4} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w^j_iw^s_r w^i_{j;k} w^r_{s;l} \\
 &+ \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r - \psi(n+1) \frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2} \\
 &+ \frac{\psi w^i_j}{\|W\|^2} \left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2} w_{kl;i} g^{jp}jw_{rs;p} - 2\frac{g^{jp} \mathcal{K}_{;i}\mathcal{K}_{;p}}{\mathcal{K}^3}\right) \\
 &+ \left(\frac{2}{\mathcal{K}^2} g^{jp}\psi_{;i} \mathcal{K}_{;j} - \frac{1}{\mathcal{K}} g^{jp} \psi_{;ip}\right) \frac{w^i_j}{\|W\|^2} \\
-& +(n-1) \frac{\alpha\psi}{h\mathcal{K}} + \frac{\alpha}{h\mathcal{K}} (F\cdot\nabla\psi) \\
-&- \frac{\alpha\psi}{h^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} h_{;k}h_{;l} - \alpha\psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r.
+& +(n-1) \frac{\alpha\psi}{h\mathcal{K}} + \frac{\alpha}{h\mathcal{K}} (F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} h_{;k}h_{;l} - \alpha\psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r.
 \end{align*}
-Since in any orthonormal frame $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ at a point $(x_0,t_0)$ with $t_0>0$ that for the first time $\Theta(x_0,t_0)=0$ we obtain
+Working in an orthonormal frame at $(x_0,t_0)$, with respect to which we may write $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ we obtain
 \begin{align*}
 0 \leq& -\frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_lw_{ll;i}^2 - \frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_{p\ne q}w_{pq;i}^2 + \frac{2\psi}{\|W\|^4} \mathcal{K}^{ii} \left(\sum_j\kappa_jw_{jj;i}\right)^2 \\
 &+ \psi\mathcal{K}^{ii} w_{ii}^2 - \psi(n+1) \mathcal{K} \sum_i\frac{w_{ii}^3}{\|W\|^2} \\
@@ -322,7 +321,7 @@ Since in any orthonormal frame $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}
 &+ (2\psi_{;i}\mathcal{K}_{;i} - \mathcal{K}\psi_{;ii}) \frac{w_{ii}}{\|W\|^2} \\
 &+ (n-1) \frac{\alpha\psi\mathcal{K}}{h} + \frac{\alpha\mathcal{K}}{h}(F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2}\mathcal{K}^{kl} h_{;k} h_{;l} - \alpha\psi\mathcal{K}^{ii}w_{ii}^2.
 \end{align*}
-Also, at $(x_0,t_0)$ we have
+From the vanishing of the first variation, at $(x_0,t_0)$ we have
 \begin{equation}\label{eq: max}
 0 = \Theta_{;k} = \frac{\kappa_iw_{ii;k}}{\|W\|^2} - \alpha\frac{h_{;k}}{h},
 \end{equation}
@@ -330,11 +329,11 @@ We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ The
 \begin{equation}\label{eq: max1}
 \Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{\sqrt{n}}\leq \kappa_1\leq c_2^{\alpha}.
 \end{equation}
-On the other hand, since $\psi$ is bounded below in view of our assumptions:
+On the other hand, since $\psi$ is bounded below in view of the bounds on $h$ in the hypotheses of the theorem,
 \begin{align}\label{eq: 1}
 \psi_{;i} \leq C_0\kappa_i \Rightarrow 2\psi_{;i} \mathcal{K}_{;i}&\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + \frac{c_4C_0^2}{\psi\varepsilon}\kappa_i^2\nonumber\\
 &\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + C\frac{\psi\kappa_i^2}{\varepsilon}\nonumber\\
-&\leq \varepsilon\psi \frac{(\mathcal{K}_{;i})^2}{\mathcal{K}} + C\frac{\psi\kappa_i^2}{\varepsilon},
+&\leq \varepsilon\psi \frac{(\mathcal{K}_{;i})^2}{\mathcal{K}} + C(\epsilon) \psi\kappa_i^2,
 \end{align}
 where $c_4$ is from Lemma \ref{lem: lower},
 and
@@ -350,8 +349,7 @@ Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 \end{align}
 To get the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below.
 
-
-Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that
+Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that (where the constant $C$ depends on $\varepsilon$)
 \begin{align}\begin{split}\label{eq:L10-1}
 0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
 +\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
@@ -367,7 +365,7 @@ Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that
 &-\psi\sum_i\left(A_i+B_i+C_i+D_i-E_i\right)
 -\frac{\alpha\psi\mathcal{K}}{h}-\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2},
 \end{split}\end{align}
-where
+where $\beta \in \mathbb{R}$ is any constant, and
 \[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
 
 \[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
@@ -386,22 +384,29 @@ The third line of \eqref{eq:L10-1} arises from
 see, for example, \cite[Lemma~2.1.14]{Gerhardt:/2006} for this relation. Since the second term in the bracket is negative and the hypersurface is convex, we can proceed in the same way as we derived $C_i$ and just throw away all indices $i$ which are neither $p$ or $q$. This gives term $B_i$. The first term in the big bracket goes into $A_i$.
 
 
-In Corollary \ref{Alternative} of the appendix we will present the method developed in \cite{Guan} to prove that by taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
+In Corollary \ref{Alternative} of the appendix we will present an adaption of the method developed in \cite{Guan} to deal with the curvature derivative terms $A_i,B_i,C_i,D_i,E_i$. There we prove that by taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
 \[\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n\]
 or
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
-By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contradiction to the bound on the Gauss curvature. In the second case \eqref{eq:L10-1} yields
+By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contradiction to the bound on the Gauss curvature. In the second case, using also $\mathcal{K}^{ii}w_{ii}^2 = \mathcal{K} \sum_i \kappa_i$, \eqref{eq:L10-1} yields
 
 
-\[0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
-+C(\alpha).\]
+\begin{align*}
+0 \leq& \frac{\psi}{\|W\|^2}\left(\sum_l \kappa_l(C + C \kappa_l^2) - n \mathcal{K} \sum_l \kappa_l^3 - \mathcal{K} \sum_l \kappa_l^3\right) \\
+&- (\alpha-1) \mathcal{K} \psi \sum_i \kappa_i \\
+& + \psi \left((n-1)\frac{\mathcal{K}}{h} - \frac{\mathcal{K}}{h^2} \sum \kappa_i (\partial_i \cdot F)^2 + \frac{\mathcal{K}}{h\psi} \sum_l  (d_F \psi \cdot \partial_l) (\partial_l \cdot F) \right) \alpha \\
+&\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - n (\alpha-1) \mathcal{K}\psi \kappa_1 + C \alpha.
+\end{align*}
 
-Take $\alpha$ such that $ (\alpha-1) \mathcal{K}\geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
-\begin{align}\label{x}
-0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
-+C(\alpha)\leq -\frac{c_1^{\alpha}}{\sqrt{n}}+C(\alpha).\
-\end{align}
-Since $C(\alpha)$ depends linearly on $\alpha$, taking $\alpha$ large enough yields a contradiction.
+Take $\alpha$ such that $n (\alpha-1) \mathcal{K}\psi \geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
+\begin{equation}\label{x}
+\begin{split}
+0 &\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - n(\alpha-1) \mathcal{K}\kappa_1 + C\alpha \\
+&\leq C(\epsilon)\left(\frac{\kappa_1^2}{\|W\|^2} - 1\right) \kappa_1 - \kappa_1 + C\alpha \\
+&\leq -\frac{c_1^{\alpha}}{\sqrt{n}} + C\alpha.
+\end{split}
+\end{equation}
+Taking $\alpha$ large enough yields a contradiction.
 \end{proof}
 %\begin{remark}
 %In $\mathbb{R}^3,$ to deduce upper and lower bounds on principal curvatures we could instead apply the maximum principle to a test function considered by Spruck-Xiao \cite{Spruck} for the prescribed scalar curvature problem:
@@ -495,7 +500,11 @@ Since $\frac{\int_{\mathbb{S}^{n}}\varphi \tilde{h}^{2-p}\tilde{S}_n^2d\sigma}{(
 applying the maximum principle to
 $\Theta=\frac 12\log(\|\tilde{W}\|^2)-\alpha\log \tilde{h},$
 and arguing as in the proof of Lemma \ref{lem: final}, we see that $\|\tilde{W}\|$ has a uniform upper bound. This in turn, in view of our lower and upper bounds on the Gauss curvature of $\tilde{K}_{\tau}$, implies that we have uniform lower and upper bounds on the principal curvatures of $\tilde{K}_{\tau}$. Higher order regularity estimates and convergence in $C^{\infty}$ for a subsequence of $\{\tilde{K}_{\tau}\}$ follow from Krylov-Safonov and standard parabolic theory and the Arzel\`{a}-Ascoli theorem. The convergence for the full sequence when $p\geq 1$ follows from the uniqueness of the self-similar solutions to (\ref{def: self similar}); see \cite{Lu1,39}.
+
 \section{Appendix}\label{appendix}
+
+\subsection*{Evolution of Polar Dual}
+
 Let $K$ be a smooth, strictly convex body with the origin in its interior. Suppose $\partial K$, the boundary of $K,$ is parameterized with the radial function $r.$
 The metric $[g_{ij}]_{1\leq i,j\leq n-1}$, unit normal $\nu$, support function $h$, and the second fundamental form $[w_{ij}]_{1\leq i,j\leq n-1}$ of $\partial K$
 can be written in terms of $r$ and its partial derivatives as follows:
