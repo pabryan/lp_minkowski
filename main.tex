@@ -395,10 +395,11 @@ By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contrad
 0 \leq& \frac{\psi}{\|W\|^2}\left(\sum_l \kappa_l(C + C \kappa_l^2) - n \mathcal{K} \sum_l \kappa_l^3 - \mathcal{K} \sum_l \kappa_l^3\right) \\
 &- (\alpha-1) \mathcal{K} \psi \sum_i \kappa_i \\
 & + \psi \left((n-1)\frac{\mathcal{K}}{h} - \frac{\mathcal{K}}{h^2} \sum \kappa_i (\partial_i \cdot F)^2 + \frac{\mathcal{K}}{h\psi} \sum_l  (d_F \psi \cdot \partial_l) (\partial_l \cdot F) \right) \alpha \\
-&\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - n (\alpha-1) \mathcal{K}\psi \kappa_1 + C \alpha.
+&\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi \kappa_1 + C \alpha
 \end{align*}
+where we discarded $-(\alpha-1)\mathcal{K}\psi \sum_{i\neq 1} \kappa_i \leq 0$ and used the bounds on $h, \psi$ and $\mathcal{K}$ as well as the bounds to $\kappa_1$ to bound $\kappa_1$ in terms of $\kappa_1^3$.
 
-Take $\alpha$ such that $n (\alpha-1) \mathcal{K}\psi \geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
+Now take $\alpha$ such that $(\alpha-1) \mathcal{K}\psi \geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
 \begin{equation}\label{x}
 \begin{split}
 0 &\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - n(\alpha-1) \mathcal{K}\kappa_1 + C\alpha \\
