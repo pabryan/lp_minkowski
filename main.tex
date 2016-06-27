@@ -331,9 +331,11 @@ We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ The
 \Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{\sqrt{n}}\leq \kappa_1\leq c_2^{\alpha}.
 \end{equation}
 On the other hand, since $\psi$ is bounded below in view of our assumptions:
-\begin{equation}\label{eq: 1}
-\psi_{;i} \leq C\kappa_i \Rightarrow \psi_{;i} \mathcal{K}_{;i} \leq \frac{\varepsilon}{2c_4} (\mathcal{K}_{;i})^2 + C\frac{\psi\kappa_i^2}{\varepsilon},
-\end{equation}
+\begin{align}\label{eq: 1}
+\psi_{;i} \leq C_0\kappa_i \Rightarrow 2\psi_{;i} \mathcal{K}_{;i}&\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + \frac{c_4C_0^2}{\psi\varepsilon}\kappa_i^2\nonumber\\
+&\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + C\frac{\psi\kappa_i^2}{\varepsilon}\nonumber\\
+&\leq \varepsilon\psi \frac{(\mathcal{K}_{;i})^2}{\mathcal{K}} + C\frac{\psi\kappa_i^2}{\varepsilon},
+\end{align}
 where $c_4$ is from Lemma \ref{lem: lower},
 and
 \begin{equation}\label{eq: 2}
@@ -349,7 +351,7 @@ Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 To get the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below.
 
 
-Combining  (\ref{eq: 1}) and (\ref{eq: 3}) and taking $\varepsilon>0$ small enough implies that
+Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that
 \begin{align}\begin{split}\label{eq:L10-1}
 0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
 +\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
@@ -384,7 +386,7 @@ The third line of \eqref{eq:L10-1} arises from
 see, for example, \cite[Lemma~2.1.14]{Gerhardt:/2006} for this relation. Since the second term in the bracket is negative and the hypersurface is convex, we can proceed in the same way as we derived $C_i$ and just throw away all indices $i$ which are neither $p$ or $q$. This gives term $B_i$. The first term in the big bracket goes into $A_i$.
 
 
-In Corollary \ref{Alternative} of the appendix we will present the method developed in \cite{Guan} to prove that by taking $\beta=2-\varepsilon$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
+In Corollary \ref{Alternative} of the appendix we will present the method developed in \cite{Guan} to prove that by taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
 \[\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n\]
 or 
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
@@ -541,7 +543,7 @@ For any $\delta>0$ and $1\leq l<n$ we have
 -&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\geq \\
 &\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
 \end{align*}
-In particular, by taking $\delta=\frac{1}{2-\varepsilon}$ , we have
+In particular, by taking $\delta=\frac{1}{2-\varepsilon}$, we have
 \begin{align}\begin{split}\label{key ineq}
 (2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}\\
 					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
@@ -574,7 +576,7 @@ This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in t
 \|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;1}^2\\
 				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2 
 \end{split}\end{align}
-Now we need to estimate $A_i$, where we recall taking $\beta=2-\epsilon$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
+Now we need to estimate $A_i$, where we recall taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
 \begin{align}\begin{split}
 A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}((\sigma_n)_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
 		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n((\sigma_{\lambda})_{;i})^2}{\sigma_{\lambda}^2}\\
