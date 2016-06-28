@@ -345,7 +345,7 @@ Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 -\frac{\mathcal{K}}{\|W\|^2}\sum_i\kappa_i \psi_{;ii}&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2-w_{ii;k}d_{\nu}\psi(\partial_k))\nonumber\\
 &\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h} \sum_k h_{;k} d_{\nu}\psi(\partial_k)\nonumber\\
 &=\frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\nonumber\\
-&\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i).
+&\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i (\partial_i \cdot F) d_{\nu}\psi(\partial_i).
 \end{align}
 To get the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below.
 
@@ -554,11 +554,11 @@ In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of 
 For any $\delta>0$ and $1\leq l<n$ we have
 \begin{align*}
 -&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\geq \\
-&\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
+&\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}((\sigma_l)_{;i})^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
 \end{align*}
 In particular, by taking $\delta=\frac{1}{2-\varepsilon}$, we have
 \begin{align}\begin{split}\label{key ineq}
-(2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}\\
+(2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}((\sigma_l)_{;i})^2}{\sigma_l^2}\\
 					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
 \end{split}\end{align}
 
@@ -580,30 +580,55 @@ In the following proof we will write $\sigma_n=\mathcal{K}$ for a better compara
 
 
 \begin{lemma}\label{app3}
-For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$ such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
+For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$, $\epsilon$ and the bounds for $\mathcal{K}$, such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad \text{for}~i=1,\cdots,n.\]
 \end{lemma}
 \begin{proof}
 This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in this proof. First of all, from the estimates in \cite[Lemma~4.2]{Guan} one can extract the following estimate:
 \begin{align}\begin{split}\label{app3-1}
-\|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;1}^2\\
-				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2
+\|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;i}^2\\
+				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2,
 \end{split}\end{align}
+compare \cite[equ.~(4.16), (4.17)]{Guan}.
 Now we need to estimate $A_i$, where we recall taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
-\begin{align}\begin{split}
+\begin{align}\begin{split}\label{}
 A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}((\sigma_n)_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
 		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n((\sigma_{\lambda})_{;i})^2}{\sigma_{\lambda}^2}\\
 					&\hphantom{=}-\frac{w_{ii}}{\|W\|^2}\frac{\sigma_n\sum_{p,q}\sigma_{\lambda}^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_{\lambda}}\\
-                    &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\sum_{a}\sigma_{\lambda}^{aa}w_{aa;i}\\
+                    &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\sum_{a}\left(\sigma_{\lambda}^{aa}w_{aa;i}\right)^2\\
                     	&\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\sum_{a\neq b}\sigma_\lambda^{aa}\sigma_{\lambda}^{bb}w_{aa;i}w_{bb;i}\\
                         &\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\sum_{a\neq b}\left(\sigma_{\lambda}^{aa}\sigma_{\lambda}^{bb}-\sigma_{\lambda}\sigma_{\lambda}^{aa,bb}\right)w_{aa;i}w_{bb;i}\Big].
 \end{split}\end{align}
 
+For sufficiently small $\delta'$ and $\lambda=1$ the simple estimates \cite[equ.~(4.19), (4.20)]{Guan} give
+\begin{equation}
+\|W\|^4A_i\geq w_{ii}^2\sigma_n^{ii}w_{11;i}-C_{\epsilon}w_{ii}\sum_{a\neq 1}w_{aa;i}^2.
+\end{equation}
+
+Combining this with \eqref{app3-1} for $i=1$ yields, also using $\sigma_{n-1}(\kappa|ij)=0,$
+\begin{align}\begin{split}\label{app3-2}
+\|W\|^2(A_1+B_1+C_1+D_1-E_1)&\geq \sum_{j\neq 1} \sigma_{n-1}(\kappa|j)w_{jj;1}^2-\frac{C_{\epsilon}}{w_{11}}\sum_{j\neq 1}w_{jj;1}^2\\
+		&=\sum_{j\neq 1}\left(\frac{\sigma_n}{w_{jj}}-\frac{C_{\epsilon}}{w_{11}}\right)w_{jj;1}^2\\
+        &\geq \sum_{j\neq 1}\left(\frac{\sigma_n}{\delta' w_{11}}-\frac{C_{\epsilon}}{w_{11}}\right)w_{jj;1}^2,
+\end{split}\end{align}
+which is non-negative for $\delta'$ sufficiently small. Hence the lemma is true in the case $\lambda=1.$
+
+For $\lambda>1$ the series of elementary estimates \cite[equ.~(4.22)-(4.27)]{Guan} gives
+\[
+\|W\|^4A_i\geq w_{ii}^2\sigma_n^{ii}\sum_{a\leq\lambda}w_{aa;i}^2-\frac{w_{ii}C_{\epsilon}}{\delta^2}\sum_{a>\lambda}w_{aa;i}^2,
+\]
+after having adapted $\epsilon$ if necessary and having chosen $\d'$ sufficiently small
+Again, combining this with \eqref{app3-1} for $1\leq i\leq \lambda$ implies
+\begin{align}\begin{split}
+\|W\|^2(A_i+B_i+C_i+D_i-E_i)&\geq \sum_{j\neq i}\sigma_{n-1}(\kappa|j)w_{jj;i}^2-\frac{w_{ii}C_{\epsilon}}{\delta^2}\sum_{j>\lambda}w_{jj;i}^2\\
+			&\geq \sum_{j>\lambda}\left(\sigma_{n-1}(\kappa|j)-\frac{w_{ii}C_{\epsilon}}{\delta^2}\right)w_{jj;i}^2,
+\end{split}\end{align}
+which is non-negative for small $\delta'$ for the same reason as in \eqref{app3-2}. This completes the proof.
 
 \end{proof}
 
 \begin{corollary}\label{Alternative}
-There exist positive numbers $\delta_1,\dots,\delta_n,$ depending only on the dimension, such that either
+There exist positive numbers $\delta_1,\dots,\delta_n,$ depending only on the dimension, on $\epsilon$ and on the bounds for the Gauss curvature, such that either
 \begin{equation}
 \kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n
 \end{equation}
@@ -613,7 +638,7 @@ A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.
 \end{equation}
 \end{corollary}
 
-\section*{Acknowledgment}
+\section*{Acknowledgement}
 
 \bibliographystyle{amsplain}
 \begin{thebibliography}{10}
