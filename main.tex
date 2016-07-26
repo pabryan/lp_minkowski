@@ -61,8 +61,18 @@ We study the asymptotic behavior of a family of curvature flows. Among other res
 \section{Introduction}
 The Minkowski problem deals with existence, uniqueness, regularity, and stability of closed convex hypersurfaces whose Gauss curvature (as a function of the outer normals) is preassigned. Major contributions to this problem were made by Minkowski \cite{M1,M2}, Aleksandrov \cite{A2,A3,A4}, Fenchel and Jessen \cite{FJ}, Lewy \cite{Le1,Le2}, Nirenberg \cite{N}, Calabi \cite{Cal}, Pogorelov \cite{P1,P2}, Cheng and Yau \cite{ChYau}, Caffarelli, Nirenberg, and Spruck \cite{CNS}, and others. A generalization of the Minkowski problem known as the $L_p$-Minkowski problem was introduced by Lutwak \cite{Lu1,Lu2}. This generalization was studied in \cite{Lu1,LuO}. Solutions to many cases of these generalized problems followed later in \cite{1,AnCrys,Andrews Ben 2000,Andrews 2003,27,36,39,49,50,51,72,LYZ,79,104,110,s1,s2,Zhu1,Zhu2,Zhu3,jiang,QL,DZ}.
 
+In the smooth category, the $L_p$-Minkowski problem asks given a smooth, strictly positive function $g : \mathbb{S}^n \to \mathbb{R}$, does there exists a smooth, closed, strictly convex hypersurface $M_0$ such that,
+\begin{equation}
+\label{e:lp}
+\frac{1}{\mathcal{K}(x)} = h^{p-1}(\nu(x)) g(\nu(x))
+\end{equation}
+where $x \in M_0$, $h$ denotes the support function, $\mathcal{K}$ the Gauss curvature and $\nu$ the Gauss map $M_0 \to \mathbb{S}^n$. The \emph{even} $L_p$-Minkowski problem requires in addition, that $g$ is an even function. The case $p=1$, is the original Minkowski problem.
 
-Consider a smooth, closed, strictly convex hypersurface $M_0$ in Euclidean space $\mathbb{R}^{n+1}$ given by a smooth embedding $F_0:M\to \mathbb{R}^{n+1}.$ Suppose the origin is in the interior of the region enclosed by $M_0.$ We study the long-time behavior of a family of hypersurfaces $\{M_t\}$ given by smooth maps $F:M\times [0,T)\to \mathbb{R}^{n+1}$ satisfying the initial value problem
+
+The existence and regularity of solutions to the $L_p$-Minkowski problem are discussed in \cite{39} for $p > −n-1$; however, the methods used in \cite{39} vary significantly depending on $p$. Our study on (\ref{e: flow0}) below is motivated by the search for a variational proof (based on curvature flow) of the $L_p$-Minkowski problem. For $p=1$, Chou-Wang \cite{Chou Wang 2000} treated the classical $L_1$-Minkowki problem in the smooth category by a logarithmic Gauss curvature flow.   For $n=1$, and $p\neq 1>-3$, the existence of solutions to the $L_p$-Minkowski problems follows from Andrews' results \cite{Andrews 1998} on the asymptotic behavior of a family of contracting and expanding flows of curves. Also, in higher dimensions, the existence of solutions to the $L_p$-Minkowski problems follows from \cite{Andrews Ben 2000} when $-n-1<p\leq -n+1$ (a short proof of this is also given in \cite{Ivaki-Proc}) or when $\varphi$ is even (e.q., $\varphi(u)=\varphi(-u)$) and $-n+1<p<1.$ See also \cite{Andrews 1999,AGN, GN, U1, U2}.
+
+
+For convenience, in studying the flow we consider $\varphi = 1/g$. Consider a smooth, closed, strictly convex hypersurface $M_0$ in Euclidean space $\mathbb{R}^{n+1}$ given by a smooth embedding $F_0:M\to \mathbb{R}^{n+1}.$ Suppose the origin is in the interior of the region enclosed by $M_0.$ We study the long-time behavior of a family of hypersurfaces $\{M_t\}$ given by smooth maps $F:M\times [0,T)\to \mathbb{R}^{n+1}$ satisfying the initial value problem
 \begin{equation}\label{e: flow0}
  \partial_{t}F(x,t)=\varphi(\nu(x,t))\frac{(F(x,t)\cdot \nu (x,t))^{2-p}}{\mathcal{K}(x,t)} \nu(x,t),\quad
  F(\cdot,0)=F_{0}(\cdot).
@@ -74,7 +84,7 @@ For $p=2,~\varphi\equiv1$, flow (\ref{e: flow0}) was studied by Schn\"{u}rer \ci
 
 Let us set
 $\tilde{K_t}=(V(B)/V(K_t))^{1/(n+1)}K_t,$ where $K_t$ denotes the convex body enclosed by $M_t$ and $V(K_t)$ is the $(n+1)$-dimensional Lebesugue measure of $K_t.$ The following theorem was proved in \cite{Ivaki 2014-gauss} regarding the case $p=-n-1,~\varphi\equiv1$ (in this case the flow belonges to a family of centro-affine normal flows introduced by Stancu in \cite{Alina 2012}):
-\begin{thmmain}
+\begin{thmmain}[\cite{Ivaki 2014-gauss}]
 Let $n\ge2,$ $p=-n-1,~\varphi\equiv1$ and suppose $K_0$ has its Santal\'{o} point at the origin, e.q., $\int_{\mathbb{S}^{n}}\frac{u}{h_{K_0}(u)^{n+2}}d\sigma(u)=0$. Then there exists a unique solution $\{K_t\}$ of flow (\ref{e: flow0}), such that $\tilde{K}_t$ converges in $C^{\infty}$ to an origin-centered ellipsoid.
 \end{thmmain}
 Here $h_{K_0}$ is the support function of $K_0.$ A closed, convex hypersurface $M_0$ can be described in terms of its support function $h_{K_0}:\mathbb{S}^n\to\mathbb{R}$ defined by
@@ -91,22 +101,30 @@ A homothetic self-similar solution of this flow satisfies
 \begin{align} \label{def: self similar}
 h^{1-p} \det (\bar{\nabla}^2 h + \operatorname{Id}h)=\frac{c}{\varphi},
 \end{align}
-for some positive constant $c.$ Here $\bar{\nabla}$ is the covariant derivative on $\mathbb{S}^{n}$ endowed with an orthonormal frame. Note that $S_{n}=\det (\bar{\nabla}^2 h + \operatorname{Id}h).$
-The $L_p$-Minkowski problem in the smooth category asks when for a positive, smooth function $\varphi$ on the unit sphere, there is a smooth, closed, strictly convex hypersurface that solves (\ref{def: self similar})?
-The existence and regularity of solutions to the $L_p$-Minkowski problem are discussed in \cite{39} for $p > −n-1$; however, the methods used in \cite{39} vary significantly depending on $p$. Our study on (\ref{e: flow0}) is motivated by the search for a variational proof (based on curvature flow) of the $L_p$-Minkowski problem. For $p=1$, Chou-Wang \cite{Chou Wang 2000} treated the classical $L_1$-Minkowki problem in the smooth category by a logarithmic Gauss curvature flow.   For $n=1$, and $p\neq 1>-3$, the existence of solutions to the $L_p$-Minkowski problems follows from Andrews' results \cite{Andrews 1998} on the asymptotic behavior of a family of contracting and expanding flows of curves. Also, in higher dimensions, the existence of solutions to the $L_p$-Minkowski problems follows from \cite{Andrews Ben 2000} when $-n-1<p\leq -n+1$ (a short proof of this is also given in \cite{Ivaki-Proc}) or when $\varphi$ is even (e.q., $\varphi(u)=\varphi(-u)$) and $-n+1<p<1.$ See also \cite{Andrews 1999,AGN, GN, U1, U2}.
-\begin{theorem}
+for some positive constant $c.$ Here $\bar{\nabla}$ is the covariant derivative on $\mathbb{S}^{n}$ endowed with an orthonormal frame. Note that $S_{n}=\det (\bar{\nabla}^2 h + \operatorname{Id}h).$  Thus self-similar solutions to the flow \eqref{e: flow0} are precisely solutions of the $L_p$-Minkowksi problem, \eqref{e:lp}. To obtain such solutions we prove the following theorems:
+
+\begin{theorem}[Even $L_p$-Minkowski problem]
 Let $-n-1<p<\infty$ and $\varphi$ be a positive, smooth even function on $\mathbb{S}^{n}$ i.e., $\varphi(u)=\varphi(-u)$. Suppose $K_0$ is origin-symmetric. There exists a unique origin-symmetric solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a smooth, origin-symmetric, strictly convex solution of (\ref{def: self similar}). Also, when $p\leq n+1$ the convergence is in $C^{\infty}$, and if $p\ge 1$ the convergence holds for the full sequence.
 \end{theorem}
+The next theorem establishes the existence of solutions to the smooth $L_p$-Minkowski problem for $-n-1< p\leq -n$:
 \begin{theorem}
 Let $-n-1< p\leq -n$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\frac{u}{\varphi(u)h_{K_0}(u)^{1-p}}d\sigma(u)=0$. There exists a unique solution $\{K_t\}$ of flow (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{\infty}$ to a positive, smooth, strictly convex solution of (\ref{def: self similar}).
 \end{theorem}
+We also prove following theorem on the asymptotic behavior of (\ref{e: flow0}) when $\varphi\equiv 1:$
 \begin{theorem}
 Let $p\neq 1>-n-1,~\varphi\equiv 1$ and $K_0$ satisfy $\int_{\mathbb{S}^{n}}\frac{u}{h_{K_0}(u)^{1-p}}d\sigma(u)=0$. Then there exists a unique solution $\{K_t\}$ of (\ref{e: flow0}) such that $\{\tilde{K}_t\}$ converges for a subsequence of times in $C^{1}$ to a positive, smooth, strictly convex solution of (\ref{def: self similar}). In addition, for $p\neq 1\leq n+1$ the convergence holds in $C^{\infty}$, and when $p> 1$ the full sequence converges to the unit ball.
 \end{theorem}
 \begin{remark}
 In the previous theorem, in some other cases than $p\ge 1$, it is known that the limiting shape is the unit ball. See, for example, \cite{Andrews 1999, andrewschen}.
 \end{remark}
-The main difficulty to prove the convergence of the normalized solutions is the long-time existence issue. Once it is proved that solutions to the flow exist until they expand to infinity uniformly in all directions, the method of \cite[Section 8]{Ivaki 2014-gauss} applies and yields the convergence of the volume-normalized solutions in $C^{1}$ to self-similar solutions provided $p\neq1$. Further work is required to establish the convergence of the normalized solutions when $p=1$ and to prove the convergence in $C^{\infty}$ if $p\leq n+1$; this is accomplished in Section \ref{sec: nor conv}; see also Remark \ref{rem}.
+
+The main difficulty to prove the convergence of the normalized solutions is the long-time existence issue. To prove long time existence, we first obtain bounds on the Gauss curvature in Section \ref{subsec:gauss-curvature-bounds} using the well known standard technique of Tso \cite{Tso} to obtain upper bounds, with lower bounds obtained by applying the same technique to the evolution of the polar body, as in \cite{Ivaki-Proc}.  Controlling the principal curvatures requires estimates of higher derivatives of the speed which is generally quite difficult due to the non-linearity of the flow. In Section \ref{subsec:principal-curvature-bounds} we obtain these crucial estimates by adapting the $C^2$ estimates of Guan-Ren-Wang for the prescribed curvature problem see \cite[(4.2)]{Guan}, and long time existence follows readily by standard arguments. Once it is proved that solutions to the flow exist until they expand to infinity uniformly in all directions, the method of \cite[Section 8]{Ivaki 2014-gauss} applies and yields the convergence of the volume-normalized solutions in $C^{1}$ to self-similar solutions provided $p\neq1$. Further work is required to establish the convergence of the normalized solutions when $p=1$ and to prove the convergence in $C^{\infty}$ if $p\leq n+1$; this is accomplished in Section \ref{sec: nor conv}; see also Remark \ref{rem}.
+\section*{Acknowledgment}
+The work of the second author was supported by Austrian Science Fund (FWF) Project
+M1716-N25 and the European
+Research Council (ERC) Project 306445.
+
+
 %\begin{theorem}\label{thm: 3}
 %Let $p>1,$ and $K_0\in\mathcal{F}_0^{n+1}$ satisfy $\int_{\mathbb{S}^{n}}\frac{z}{\varphi(z)u_{K_0}(z)^{1-p}}d\sigma(z)=0$. Then there exists a unique solution $\{K_t\}\subset \mathcal{F}_0^{n+1} $ of flow (\ref{eq: flow4}) such that $\{\tilde{K}_t\}$ converges in Hausdorff topology to a convex body $\tilde{K}_{\infty}\in\mathcal{K}^{n+1}$ that may have the origin of on its boundary and is the unique solution of the $L_p$-Minkowski problem.
 %\end{theorem}
@@ -117,7 +135,10 @@ The main difficulty to prove the convergence of the normalized solutions is the 
 %If $-n-1<p\leq -n,$ for a given $\varphi$ and $K$, a Euclidean translation of $K$, $K+v$, satisfies $\int_{\mathbb{S}^{n}}\frac{z}{\varphi(z)u_{K+v}(z)^{1-p}}d\sigma(z)=0.$
 %Regarding the case $p>1,$ if $\varphi^{1/(p-1)}$ is the support function of some smooth, strictly convex body then we may choose $K_0$ to be the corresponding convex body so that $\int_{\mathbb{S}^{n}}\frac{z}{\varphi(z)u_{K_0}(z)^{1-p}}d\sigma(z)=0.$
 %\end{remark}
+
+
 \section{basic evolution equations}
+
 Let $g=\{g_{ij}\}$, and $W=\{w_{ij}\}$ denote, in order, the induced metric and the second fundamental form of $M$. At every point in the hypersurface $M$ choose a local orthonormal frame $\{e_1,\cdots, e_n\}.$
 
 We use the following standard notation
@@ -127,38 +148,43 @@ We use the following standard notation
 Here, $\{g^{ij}\}$ is the inverse matrix of $\{g_{ij}\}.$
 
 
-The following geometric formulas are well-known
+We use semicolons to denote covariant derivatives. The following geometric formulas are well-known:
 \begin{align*}
-\nabla_i\nu&=w_i^ke_k,\\
-\nu_{;ij}&=\nabla_kw_{ij}e_k-w_i^lw_{lj}\nu,\\
-\nabla_ih&=w_i^k(F\cdot e_k),\\
-h_{;ij}&=w_{ij}-hw_i^lw_{lj}+F\cdot\nabla w_{ij}.\\
+\nu_{;i} &= w_i^ke_k,\\
+\nu_{;ij} &= g^{kl}w_{ij;l}e_k - w_i^lw_{lj}\nu,\\
+h_{;i} &= w_i^k (F\cdot e_k),\\
+h_{;ij} &= w_{ij} - hw_i^lw_{lj} + F \cdot \nabla w_{ij}.\\
 %\|F\|^2_{;ij}&=2g_{ij}-2w_{ij}h.
 \end{align*}
-Note that in above we considered the support function as a function on the boundary of the hyperspace; that is, at the point $x\in M$ we have
+Note that in above we considered the support function as a function on the boundary of the hypersurface; that is, at the point $x\in M$ we have
 $$h(x)=F(x)\cdot \nu(x).$$
 
 
-Set $\Phi=-r^{-n}$, $S=\mathcal{K}^{\frac{1}{n}}$ and $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolution equations are standard; see, for example, \cite{Gerhardt:/2006}.
+For convenience, let $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolution equations are standard; see, for example, \cite{Gerhardt:/2006}.
 \begin{lemma} The following evolution equations hold:
-\[\partial_t\nu=\nabla \psi\Phi,\]
-\[\partial_t w_i^j=(\psi\Phi)_{;ij}+\psi\Phi w_i^kw_k^j,\]
+\[\partial_t \nu = -\nabla \left(\frac{\psi}{\mathcal{K}}\right),\]
 \begin{align*}
-\partial_tw_i^j=&\psi\dot{\Phi}S^{kl}w_{i;kl}^j+\psi\dot{\Phi}S^{kl}w_{kr}w_l^rw_i^j+\psi(\Phi-\dot{\Phi}S)w_{i}^kw_k^{j}+\psi\ddot{\Phi}\nabla_iS\nabla^jS\\
-&+\psi\dot{\Phi}S^{kl,rs}\nabla_iw_{kl}\nabla^jw_{rs}+\nabla_i\psi\nabla^j\Phi+\nabla^j\psi\nabla_i\Phi+\Phi\nabla_i\nabla^j\psi,
+\partial_t w_i^j &= -\left(\frac{\psi}{\mathcal{K}}\right)_{;ij} - \left(\frac{\psi}{\mathcal{K}}\right) w_i^kw_k^j \\
+&= \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;kl}^j + \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^rw_i^j -(n+1)\frac{\psi }{\mathcal{K}} w_{i}^k w_k^{j} \\
+&\quad  + \psi\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^{2}}g^{jm} w_{kl;i}w_{rs;m}- \frac{2\psi}{\mathcal{K}^{3}}g^{jm} \mathcal{K}_{;i}\mathcal{K}_{;m} \\
+&\quad + \frac{1}{\mathcal{K}^{2}}g^{jk}\mathcal{K}_{;k}\psi_{;i} + \frac{1}{\mathcal{K}^{2}} g^{jk}\psi_{;k}\mathcal{K}_{;i} - \frac{1}{\mathcal{K}} g^{jk}\psi_{;ik},
 \end{align*}
 \begin{align*}
-\partial_th=&\psi\dot{\Phi}S^{ij}h_{;ij}
-+\psi h\dot{\Phi}S^{ij}w_i^lw_{jl}
--\psi(\Phi+\dot{\Phi}S)+\Phi F\cdot\nabla\psi.
+\partial_th &= \psi \frac{\mathcal{K}^{ij}}{\mathcal{K}^{2}} h_{;ij} + \psi h \frac{\mathcal{K}^{ij}}{\mathcal{K}^{2}} w_i^lw_{lj} - (n-1) \frac{\psi}{\mathcal{K}}- \frac{1}{\mathcal{K}} F\cdot\nabla\psi.
 \end{align*}
 %\begin{align*}
 %\partial_t\|F\|^2=\psi\dot{\Phi}S^{ij}\|F\|^2_{;ij}-2h\psi\dot{\Phi}S^{ij}g_{ij}+2\psi(\dot{\Phi}S-\Phi)h.
 %\end{align*}
 \end{lemma}
+\begin{proof}
+\end{proof}
 \section{long-time existence}
+\label{sec:long-time-existence}
+
 \subsection{Lower and upper bounds on Gauss curvature}
-The proofs of the following two lemmas are similar to the proofs of \cite[ Lemmas 4.1, 4.2]{Ivaki-Proc}. For completeness, we give the proofs here.
+\label{subsec:gauss-curvature-bounds}
+
+The proofs of the following two lemmas are similar to the proofs of \cite[ Lemmas 4.1, 4.2]{Ivaki-Proc}. For completeness, we give the proofs here. In this section only we use $\bar{\nabla}$ to denote covariant derivatives on the sphere with respect to the standard metric.
 
 
 The matrix of the radii of the curvature of a smooth, closed, strictly convex hypersurface is denoted by $\mathfrak{r}=[\mathfrak{r}_{ij}]$ and the entries of $\mathfrak{r}$ are considered as functions on the unit sphere. They can be expressed in terms of the support function as $\mathfrak{r}_{ij}:=\bar{\nabla}_i\bar{\nabla}_j h+\bar{g}_{ij}h,$ where $[\bar{g}_{ij}]$ is the standard metric on $\mathbb{S}^{n}$. Additionally, we recall that
@@ -277,84 +303,80 @@ The lower bound for $\mathcal{K}$ on $[0,\delta]$ for a small enough $\delta>0$ 
 \end{proof}
 
 \subsection{Upper and lower bounds on principal curvatures}
+\label{subsec:principal-curvature-bounds}
+
  To obtain upper and lower bounds on the principal curvatures, we will consider the test function used by Guan-Ren-Wang for a prescribed curvature problem; see \cite[(4.2)]{Guan}.
 \begin{lemma}\label{lem: final}
-Let $\{K_t\}$ be a solution of (\ref{e: flow0}) on $[0,t_1]$. If $c_1\leq h_{K_t}\leq c_2$ on $[0,t_1]$, then $c_5\leq \kappa_i\le c_6$ on $[0,t_1],$ where $c_5$ and $c_6$ depend on $K_0,$
+Let $\{K_t\}$ be a solution of (\ref{e: flow0}) on $[0,t_1]$. If $c_1\leq h_{K_t}\leq c_2$ on $[0,t_1]$, then $c_5\leq \kappa_i\le c_6$ on $[0,t_1],$ where $c_5$ and $c_6$ depend on $K_0$, $c_1,c_2,p,\varphi$ and $t_1.$
 \end{lemma}
 \begin{proof}
 In view of Lemmas \ref{lem: lower} and \ref{lem: upper}, it suffices to show that $\|W\|$ remains bounded on $[0,t_1]$. Consider the test function
 \[\Theta=\frac 12\log(\|W\|^2)-\alpha\log h.\]
 Assume, without loss of generality, that $c_1> 1;$ otherwise we replace $h$ by $2h/c_1.$
-Using the parabolic maximum principle we show that for some $\alpha$ large enough $\Theta(\cdot,t)$ is always negative on $[0,t_1]$. The evolution equation of $\Theta$
-is given by
+Using the parabolic maximum principle we show that for some $\alpha$ large enough $\Theta(\cdot,t)$ is always negative on $[0,t_1]$. If the conclusion of the theorem is false, we may choose $(x_0,t_0)$ with $t_0>0$ and such that $\Theta(x_0,t_0)=0$, $\Theta(x, t_0) \leq 0$, and $\Theta(x,t) < 0$ for $t<t_0$. Then,
 \begin{align*}
-\dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl}=&-\frac{\psi}{\|W\|^2}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\nabla_kw_i^j\nabla_lw_j^i
-+\frac{2\psi}{\|W\|^4}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w^j_ih^s_r\nabla_kw^i_j \nabla_lw^r_{s}\\
-&+\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w_{kr}w_l^r-\psi(n+1)\frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2}\\
-&+\frac{\psi w^i_j}{\|W\|^2}\left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2}\nabla_iw_{kl}\nabla^jw_{rs}-2\frac{\nabla_i\mathcal{K}\nabla^j\mathcal{K}}{\mathcal{K}^3}\right)\\
-&+(\frac{2}{\mathcal{K}^2}\nabla_i\psi\nabla^j\mathcal{K}-\frac{1}{\mathcal{K}}\nabla_i\nabla^j\psi)\frac{w^i_j}{\|W\|^2}\\
-&+(n-1)\frac{\alpha\psi}{h\mathcal{K}}+\frac{\alpha}{h\mathcal{K}}(F\cdot\nabla\psi)\\
-&-\frac{\alpha\psi}{h^2}\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\nabla_kh\nabla_lh
--\alpha\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}w_{kr}w_l^r.
+0 \leq& \dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl} \\
+&= -\frac{\psi}{\|W\|^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;k}^j w_{j;l}^i + \frac{2\psi}{\|W\|^4} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w^j_iw^s_r w^i_{j;k} w^r_{s;l} \\
+&+ \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r - (n+1)\psi \frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2} \\
+&+ \frac{\psi w^i_j}{\|W\|^2} \left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2} w_{kl;i} g^{jp}jw_{rs;p} - 2\frac{g^{jp} \mathcal{K}_{;i}\mathcal{K}_{;p}}{\mathcal{K}^3}\right) \\
+&+ \left(\frac{2}{\mathcal{K}^2} g^{jp}\psi_{;i} \mathcal{K}_{;j} - \frac{1}{\mathcal{K}} g^{jp} \psi_{;ip}\right) \frac{w^i_j}{\|W\|^2} \\
+& +(n-1) \frac{\alpha\psi}{h\mathcal{K}} + \frac{\alpha}{h\mathcal{K}} (F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} h_{;k}h_{;l} - \alpha\psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r.
 \end{align*}
-Since in any orthonormal frame $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ at a point $(x_0,t_0)$ with $t_0>0$ that for the first time $\Theta(x_0,t_0)=0$ we obtain
+Working in an orthonormal frame at $(x_0,t_0)$, with respect to which we may write $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ we obtain
 \begin{align*}
-0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
-+\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}(\sum_j\kappa_jw_{jj;i})^2\\
-&+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
-&+\frac{\psi w_{ii}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}-\mathcal{K}^{pp,qq}w_{pq;i}^2
--2\frac{(\nabla_i\mathcal{K})^2}{\mathcal{K}}\right)\\
-&+(2\nabla_i\psi\nabla_i\mathcal{K}-\mathcal{K}\nabla_i\nabla_i\psi)\frac{w_{ii}}{\|W\|^2}\\
-&+(n-1)\frac{\alpha\psi\mathcal{K}}{h}+\frac{\alpha\mathcal{K}}{h}(F\cdot\nabla\psi)-\frac{\alpha\psi}{h^2}\mathcal{K}^{kl}\nabla_kh\nabla_lh
--\alpha\psi\mathcal{K}^{ii}w_{ii}^2.
+0 \leq& -\frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_lw_{ll;i}^2 - \frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_{p\ne q}w_{pq;i}^2 + \frac{2\psi}{\|W\|^4} \mathcal{K}^{ii} \left(\sum_j\kappa_jw_{jj;i}\right)^2 \\
+&+ \psi\mathcal{K}^{ii} w_{ii}^2 -(n+1) \psi \mathcal{K} \sum_i\frac{w_{ii}^3}{\|W\|^2} \\
+&+ \frac{\psi w_{ii}}{\|W\|^2} \left(\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i} - \mathcal{K}^{pp,qq}w_{pq;i}^2 - 2\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\right) \\
+&+ (2\psi_{;i}\mathcal{K}_{;i} - \mathcal{K}\psi_{;ii}) \frac{w_{ii}}{\|W\|^2} \\
+&+ (n-1) \frac{\alpha\psi\mathcal{K}}{h} + \frac{\alpha\mathcal{K}}{h}(F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2}\mathcal{K}^{kl} h_{;k} h_{;l} - \alpha\psi\mathcal{K}^{ii}w_{ii}^2.
 \end{align*}
-Also, at $(x_0,t_0)$ we have
+From the vanishing of the first variation, at $(x_0,t_0)$ we have
 \begin{equation}\label{eq: max}
-0=\nabla_k\Theta=\frac{\kappa_iw_{ii;k}}{\|W\|^2}-\alpha\frac{\nabla_k h}{h},
+0 = \Theta_{;k} = \frac{\kappa_iw_{ii;k}}{\|W\|^2} - \alpha\frac{h_{;k}}{h},
 \end{equation}
 We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ Therefore,
 \begin{equation}\label{eq: max1}
-\Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{n}\leq \kappa_1\leq c_2^{\alpha}.
+\Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{\sqrt{n}}\leq \kappa_1\leq c_2^{\alpha}.
 \end{equation}
-On the other hand, since $\psi$ is bounded below in view of our assumptions:
-\begin{equation}\label{eq: 1}
-\nabla_i\psi\leq C\kappa_i\Rightarrow \nabla_i\psi\nabla_i\mathcal{K}\leq \frac{\varepsilon}{2c_4} (\nabla_i\mathcal{K})^2+C\frac{\psi\kappa_i^2}{\varepsilon},
-\end{equation}
-where $c_4$ is from Lemma \ref{lem: lower},
+On the other hand, since $\psi$ is bounded above and below in view of the hypotheses of the lemma, we obtain
+\begin{align}\label{eq: 1}
+\psi_{;i} \leq C_0\kappa_i \Rightarrow 2\psi_{;i} \mathcal{K}_{;i}&\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + \frac{c_4C_0^2}{\psi\varepsilon}\kappa_i^2\nonumber\\
+&\leq \varepsilon\psi \frac{(\mathcal{K}_{;i})^2}{\mathcal{K}} + C(\varepsilon,K_0,\varphi,t_1) \psi\kappa_i^2,
+\end{align}
+where $c_4$ (depending on $t_1$) is from Lemma \ref{lem: lower},
 and
 \begin{equation}\label{eq: 2}
-\nabla_i\nabla_i\psi\geq -C-C\kappa_i-C\kappa_i^2+w_{ii;k}d_{\nu}\psi(\partial_k).
+\psi_{;ii} \geq - C - C\kappa_i - C\kappa_i^2 + w_{ii;k} d_{\nu} \psi(\partial_k).
 \end{equation}
 Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 \begin{align}\label{eq: 3}
--\frac{\mathcal{K}}{\|W\|^2}\sum_i\kappa_i\nabla_i\nabla_i\psi&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2-w_{ii;k}d_{\nu}\psi(\partial_k))\nonumber\\
-&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \nabla_k hd_{\nu}\psi(\partial_k)\nonumber\\
+-\frac{\mathcal{K}}{\|W\|^2}\sum_i\kappa_i \psi_{;ii}&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2-w_{ii;k}d_{\nu}\psi(\partial_k))\nonumber\\
+&\leq \frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h} \sum_k h_{;k} d_{\nu}\psi(\partial_k)\nonumber\\
 &=\frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\nonumber\\
-&\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i).
+&\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i (\partial_i \cdot F) d_{\nu}\psi(\partial_i).
 \end{align}
-To get the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below.
+For the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below (so the constant $C$ depends on $K_0,\varphi, t_1$).
 
-
-Combining  (\ref{eq: 1}) and (\ref{eq: 3}) and taking $\varepsilon>0$ small enough implies that
+Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that
 \begin{align}\begin{split}\label{eq:L10-1}
 0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
-+\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}(\sum_j\kappa_jw_{jj;i})^2\\
-&+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
++\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
+&+\psi\mathcal{K}^{ii}w_{ii}^2-(n+1)\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
 &+\frac{\psi w_{ll}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;l}w_{qq;l}-\mathcal{K}^{pp,qq}w_{pq;l}^2
--(2-\varepsilon)\frac{(\mathcal{K})_l^2}{\mathcal{K}}\right)\\
+-(2-\varepsilon)\frac{(\mathcal{K}_{;l})^2}{\mathcal{K}}\right)\\
 &+\frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &+(n-1)\frac{\alpha\psi\mathcal{K}}{h}+\frac{\alpha\mathcal{K}}{h}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)+\frac{\alpha\mathcal{K}}{h}\sum_i\kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &-\frac{\alpha\psi}{h^2}\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2 -\alpha\psi\mathcal{K}^{ii}w_{ii}^2\\
 \leq&\frac{\psi}{\|W\|^2}\left(\sum_l\kappa_l\left(C+C\kappa_l^2+\frac{(\beta
--2+\varepsilon)(\mathcal{K})_l^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
+-2+\varepsilon)(\mathcal{K}_{;l})^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
 &+\alpha\psi\left(\frac{n\mathcal{K}}{h}-\mathcal{K}^{ii}w_{ii}^2-\frac{\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2}{h^2}+\frac{\mathcal{K}}{h\psi}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)\right)\\
 &-\psi\sum_i\left(A_i+B_i+C_i+D_i-E_i\right)
 -\frac{\alpha\psi\mathcal{K}}{h}-\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2},
 \end{split}\end{align}
-where
-\[A_i=\frac{1}{\|W\|^2\mathcal{K}}\beta w_{ii}(\mathcal{K})^2_i-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
+where $\beta \in \mathbb{R}$ is any constant, the constant $C$ depends on $\varepsilon,K_0,\varphi,t_1$, and
+\[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
 
-\[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
+\[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
 
 \[D_i=\frac{1}{\|W\|^2}\mathcal{K}^{ii}\sum_j w_{jj;i}^2,\quad
 E_i=\frac{2}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j w_{jj}w_{jj;i}\right)^2.\]
@@ -370,15 +392,29 @@ The third line of \eqref{eq:L10-1} arises from
 see, for example, \cite[Lemma~2.1.14]{Gerhardt:/2006} for this relation. Since the second term in the bracket is negative and the hypersurface is convex, we can proceed in the same way as we derived $C_i$ and just throw away all indices $i$ which are neither $p$ or $q$. This gives term $B_i$. The first term in the big bracket goes into $A_i$.
 
 
-Take $\beta=2-\varepsilon$. In view of Lemmas \ref{app2}, \ref{app3},  (\ref{eq:L10-1}) reads
-\[0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
-+C(\alpha).\]
-Take $\alpha$ such that $ (\alpha-1) \mathcal{K}\geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
-\begin{align}\label{x}
-0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2}-(\alpha-1) \mathcal{K}\kappa_1
-+C(\alpha)\leq -\frac{c_1^{\alpha}}{n}+C(\alpha).\
-\end{align}
-Since $C(\alpha)$ depends linearly on $\alpha$, taking $\alpha$ large enough yields a contradiction.
+In Corollary \ref{Alternative} of the appendix we will present an adaption of the method developed in \cite{Guan} to deal with the curvature derivative terms $A_i,B_i,C_i,D_i,E_i$. There we prove that by taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
+\[\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n\]
+or
+\[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
+By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contradiction to the bound on the Gauss curvature. In the second case, using also $\mathcal{K}^{ii}w_{ii}^2 = \mathcal{K} \sum_i \kappa_i$, \eqref{eq:L10-1} yields
+
+\begin{align*}
+0 \leq& \frac{\psi}{\|W\|^2}\left(\sum_l \kappa_l(C + C \kappa_l^2) - n \mathcal{K} \sum_l \kappa_l^3\right)- (\alpha-1) \mathcal{K} \psi \sum_i \kappa_i \\
+& + \psi \left((n-1)\frac{\mathcal{K}}{h} - \frac{\mathcal{K}}{h^2} \sum \kappa_i (\partial_i \cdot F)^2 + \frac{\mathcal{K}}{h\psi} \sum_l  (\partial_l \cdot F) d_F \psi (\partial_l) \right) \alpha.
+\end{align*}
+Consequently, we obtain
+\[0\leq \frac{C(\varepsilon,K_0,\varphi,t_1)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi \kappa_1 + C(K_0,\varphi,t_1) \alpha,\]
+where we discarded $-(\alpha-1)\mathcal{K}\psi \sum_{i\neq 1} \kappa_i \leq 0$ and used the bounds on $h, \psi$ and $\mathcal{K}$ to bound $\kappa_1$ in terms of $\kappa_1^3$.
+
+Now take $\alpha$ such that $(\alpha-1) \mathcal{K}\psi \geq C(\varepsilon,K_0,\varphi,t_1)+1$. Therefore, in view of (\ref{eq: max1})
+\begin{equation}\label{x}
+\begin{split}
+0 &\leq \frac{C(\varepsilon,K_0,\varphi,t_1)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi\kappa_1 + C(K_0,\varphi,t_1)\alpha \\
+&\leq C(\varepsilon,K_0,\varphi,t_1)\left(\frac{\kappa_1^2}{\|W\|^2} - 1\right) \kappa_1 - \kappa_1 + C(K_0,\varphi,t_1)\alpha \\
+&\leq -\frac{c_1^{\alpha}}{\sqrt{n}} + C(K_0,\varphi,t_1)\alpha.
+\end{split}
+\end{equation}
+Taking $\alpha$ large enough yields a contradiction.
 \end{proof}
 %\begin{remark}
 %In $\mathbb{R}^3,$ to deduce upper and lower bounds on principal curvatures we could instead apply the maximum principle to a test function considered by Spruck-Xiao \cite{Spruck} for the prescribed scalar curvature problem:
@@ -391,7 +427,7 @@ Since $C(\alpha)$ depends linearly on $\alpha$, taking $\alpha$ large enough yie
 The solution to (\ref{e: flow0}) satisfies $\lim\limits_{t\to T}\max h_{K_t}=\infty.$
 \end{proposition}
 \begin{proof}
-First, let $p> n+1.$ In this case the flow exists on $[0,\infty).$
+First, let $p> n+1.$ In this case, by comparing with outer balls, the flow exists on $[0,\infty).$
 Consider an origin centered ball $B_r$, such that $K_0\supseteq B_r.$ Then $K_t\supseteq B_{r(t)},$ where $$r(t)=\left((\min h_{K_0})^{p-n-1}+t(p-n-1)\min \varphi \right)^{\frac{1}{p-n-1}}$$ and $B_{r(t)}$ expands to infinity as $t$ approaches $\infty$. When $p=n+1$ the argument is similar. Second, if $p<n+1$, then the flow exists only on a finite time interval. If $\max h_{K_t}<\infty$, then by Lemmas \ref{lem: lower}, \ref{lem: upper} and \ref{lem: final}, the evolution equation (\ref{e: flow0}) is uniformly parabolic on $[0,T)$. Thus, the result of Krylov and Safonov \cite{Krylov-Safonov} and standard parabolic theory allow us to extend the solution smoothly past time $T$, contradicting its maximality.
 \end{proof}
 \section{convergence of normalized solutions}\label{sec: nor conv}
@@ -404,7 +440,9 @@ Therefore, a subsequence of $\{\tilde{K}_{t_k}\}$ converges in the Hausdorff dis
 \begin{remark}\label{rem}
 Section \ref{sec} completes the discussion on the existence of solutions to the smooth, even $L_p$-Minkowski problems in $\mathbb{R}^{n+1}$ for $p\neq 1>-n-1.$ The next section discusses  the $C^{\infty}$ convergence when $p\neq1\leq n+1$, and also when $p=1$ and solutions are origin-symmetric.
 \end{remark}
+
 \subsection{Convergence in $C^{\infty}$}
+
 By \cite[Lemma 9.2]{Ivaki 2014-gauss}, there is a uniform upper bound on the Gauss curvature of the normalized solution when $p\leq n+1.$
 In the following, we first obtain a uniform lower bound on the Gauss curvature of the normalized solution $\tilde{K}_t$.
 
@@ -436,7 +474,7 @@ for all $t\in [0,T)$. Consequently,
 t+\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2}\right)
 =c_t^{\frac{1}{n+1}}\cdot\bar{h}(\cdot,\frac{\delta}{2})
 \end{align*}
-has a bound below Gauss curvature for all $t\in [0,T)$.
+has Gauss curvature bounded below for all $t\in [0,T)$.
 
 Now we show that for every
  $\tilde{t}\in\left[\left(V(B)/V(K_0)\right)^{\frac{1+n-p}{n+1}}\frac{\delta}{2},T\right)$, we can find $t\in[0,T)$ such that
@@ -453,23 +491,28 @@ $f$ is continuous, and
 \]
 The claim follows.
 
-Next we obtain uniform lower and upper bounds on the principal curvatures of the normalized solution. We only consider the case $p<n+1.$
-For each $t\in [0,T)$ by the comparison principle we have
+Next we obtain uniform lower and upper bounds on the principal curvatures of the normalized solution.
+
+Consider the convex bodies $\tilde{K}_{\tau}:=\left(\frac{V(B)}{V(K_t)}\right)^{\frac{1}{n+1}}K_t,$ where
+$$\tau(t):=\int_0^t \left(\frac{V(K_t)}{V(B)}\right)^{\frac{1+n-p}{n+1}}dt,\footnote{Suppose $p<n+1.$ For each $t\in [0,T)$ by the comparison principle we have
 \[\frac{(\max h_{K_t})^{p-n-1}}{(n+1-p)\max \varphi}\leq T-t\leq \frac{(\min h_{K_t})^{{p-n-1}}}{(n+1-p)\min \varphi}.\]
 Therefore, since $\frac{\max h_{K_t}}{\min h_{K_t}}\leq \frac{R}{r}$ (see (\ref{ratio})), we get
-\begin{align}\label{qq}
+\begin{align*}
 c_1(T-t)^{\frac{1}{p-n-1}}\leq \min h_{K_t} \leq \left(\frac{V(K_t)}{V(B)}\right)^{\frac{1}{n+1}}\leq \max h_{K_t}\leq c_2(T-t)^{\frac{1}{p-n-1}}.
-\end{align}
-Consider the convex bodies $\bar{K}_{\tau}=((n+1-p)(T-t))^{\frac{1}{n+1-p}}K_t,$ where
-$$\tau(t)=-\frac{\log(T-t)}{n+1-p}.$$
-Let us furnish all geometric quantities associated with $\bar{K}_{\tau}$ by an over-bar.
-The evolution equation of $\bar{h}_{\tau}$ is given by
-\[\partial_\tau \bar{h}_{\tau}=\varphi \bar{h}^{2-p}\bar{S}_n-\bar{h}.\]
-Applying the maximum principle to
-\[\Theta=\frac 12\log(\|\bar{W}\|^2)-\alpha\log \bar{h},\]
-and arguing as in the proof of Lemma \ref{lem: final}, we see that $\|\bar{W}\|$ has a uniform upper bound. This in turn, in view of (\ref{qq}) and our lower and upper bounds on the Gauss curvature of $\tilde{K}_t$, implies that we have uniform lower and upper bounds on the principal curvatures of $\tilde{K}_t$ (and of $\bar{K}_t$ ). Higher order regularity estimates and convergence in $C^{\infty}$ for subsequences of $\{\tilde{K}_{t}\}$ and $\{\bar{K}_{\tau}\}$ follow from Krylov-Safonov and standard parabolic theory and the Arzel\`{a}-Ascoli theorem\footnote{Note that since the time variable in $\{\bar{K}_{\tau}\}$ is
-$\tau(t)=-\frac{\log(T-t)}{n+1-p}$, we have exponential convergence for $\{\bar{K}_{\tau}\}$.}. The convergence for the full sequence when $p\geq 1$ follows from the uniqueness of the self-similar solutions to (\ref{def: self similar}); see \cite{Lu1,39}.
+\end{align*}
+Thus $\lim_{t\to T}\tau(t)=\infty.$}$$
+Let us furnish all geometric quantities associated with $\tilde{K}_{\tau}$ by an over-tilde.
+The evolution equation of $\tilde{h}_{\tau}$ is given by
+\[\partial_\tau \tilde{h}_{\tau}=\varphi \tilde{h}^{2-p}\tilde{S}_n-\frac{\int_{\mathbb{S}^{n}}\varphi \tilde{h}^{2-p}\tilde{S}_n^2d\sigma}{(n+1)V(B)}\tilde{h}.\]
+Since $\frac{\int_{\mathbb{S}^{n}}\varphi \tilde{h}^{2-p}\tilde{S}_n^2d\sigma}{(n+1)V(B)}$ is uniformly bounded above,
+applying the maximum principle to
+$\Theta=\frac 12\log(\|\tilde{W}\|^2)-\alpha\log \tilde{h},$
+and arguing as in the proof of Lemma \ref{lem: final}, we see that $\|\tilde{W}\|$ has a uniform upper bound. This in turn, in view of our lower and upper bounds on the Gauss curvature of $\tilde{K}_{\tau}$, implies that we have uniform lower and upper bounds on the principal curvatures of $\tilde{K}_{\tau}$. Higher order regularity estimates and convergence in $C^{\infty}$ for a subsequence of $\{\tilde{K}_{\tau}\}$ follow from Krylov-Safonov \cite{Krylov-Safonov}, standard parabolic theory and the Arzel\`{a}-Ascoli theorem. The convergence for the full sequence when $p\geq 1$ follows from the uniqueness of the self-similar solutions to (\ref{def: self similar}); see \cite{Lu1,39}.
+
 \section{Appendix}\label{appendix}
+
+\subsection*{Evolution of polar bodies}
+
 Let $K$ be a smooth, strictly convex body with the origin in its interior. Suppose $\partial K$, the boundary of $K,$ is parameterized with the radial function $r.$
 The metric $[g_{ij}]_{1\leq i,j\leq n-1}$, unit normal $\nu$, support function $h$, and the second fundamental form $[w_{ij}]_{1\leq i,j\leq n-1}$ of $\partial K$
 can be written in terms of $r$ and its partial derivatives as follows:
@@ -510,31 +553,100 @@ Now we calculate
 \end{align*}
 Replacing $r$ by $1/h^{\ast}$ and taking into account (\textbf{b}) finishes the proof.
 \end{proof}
-In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}. For any $\delta>0$ and $1\leq l<n$ we have
+
+\subsection*{Estimates for curvature derivatives}
+For convenience we present some of the main ideas, how one can prove the alternative in Lemma \ref{lem: final} about balancing the curvature derivatives. This method was used in \cite{Guan} for a similar stationary prescribed curvature equation.
+In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}, which can be deduced easily by differentiating
+\[\log G=\log \left(\frac{\sigma_k}{\sigma_l}\right)^{\frac{1}{k-l}}\] twice, using the concavity of $G$ and applying the Schwartz inequality.
+For any $\delta>0$ and $1\leq l<n$ we have
 \begin{align*}
--&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\mathcal{K})_i^2}{\mathcal{K}}\geq \\
-&\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
+-&\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}+\left(1-\frac{1}{n-l}+\frac{1}{(n-l)\delta}\right)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\geq \\
+&\left(1+\frac{1-\delta}{n-l}\right)\frac{\mathcal{K}((\sigma_l)_{;i})^2}{\sigma_l^2}-\frac{\mathcal{K}}{\sigma_l}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}.
 \end{align*}
-In particular, by taking $\delta=\frac{1}{2-\varepsilon}$ , we have
-\begin{align}\label{key ineq}
-(2-\varepsilon)\frac{(\mathcal{K})_i^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}(\sigma_l)_i^2}{\sigma_l^2}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
-\end{align}
+In particular, by taking $\delta=\frac{1}{2-\varepsilon}$, we have
+\begin{align}\begin{split}\label{key ineq}
+(2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}((\sigma_l)_{;i})^2}{\sigma_l^2}\\
+					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
+\end{split}\end{align}
+
+
+
+\begin{remark}
+Note that the term $A_i$ looks slightly different from the term $A_i$ in \cite{Guan}, where the $\mathcal{K}$ is not present in the denominator. We have to define $A_i$ in the way we did, because due to the inverse nature of the curvature flow equation we obtain an extra good derivative term, into which we can absorb the $\beta$-part of $A_i$, if it is not too large. Fortunately the proofs of \cite[Lemma~4.2, Lemma~4.3]{Guan} also work for some $\beta<2$ as we will indicate shortly.
+\end{remark}
 
 \begin{lemma}\label{app2}
 For each $i\ne 1,$ if $\sqrt{3}\kappa_i\leq \kappa_1,$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0.\]
 \end{lemma}
 \begin{proof}
-Note that by setting $l=1$ in (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ is similar to the proof of \cite[Lemma 4.2]{Guan}.
+Note that from (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ can literally be taken from \cite[Lemma 4.2]{Guan}, starting with \cite[Equ.~(4.10)]{Guan}.
 \end{proof}
+
+In the following proof we will write $\sigma_n=\mathcal{K}$ for a better comparability with \cite[Lemma~4.3]{Guan}. Also denote by $\sigma_k(\kappa|i)$ the $k$-th elementary symmetric polynomial in the variables $\kappa_1,\dots,\kappa_{i-1},\kappa_{i+1},\dots,\kappa_n$ and $\sigma_k(\kappa|ij)$ accordingly.
+
+
 \begin{lemma}\label{app3}
-For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\ge 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$ such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
+For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\kappa_{\lambda}/\kappa_1\geq \delta.$ There exists a sufficiently small positive constant $\delta'$ depending on $\delta$, $\epsilon$ and the bounds for $\mathcal{K}$, such that if $\kappa_{\lambda+1}/\kappa_1\leq \delta',$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad \text{for}~i=1,\cdots,n.\]
 \end{lemma}
 \begin{proof}
-In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}$.
+This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in this proof. First of all, from the estimates in \cite[Lemma~4.2]{Guan} one can extract the following estimate:
+\begin{align}\begin{split}\label{app3-1}
+\|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;i}^2\\
+				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2,
+\end{split}\end{align}
+compare \cite[Equ.~(4.16), (4.17)]{Guan}.
+Now we need to estimate $A_i$, where we recall taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
+\begin{align}\begin{split}\label{}
+A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}((\sigma_n)_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
+		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n((\sigma_{\lambda})_{;i})^2}{\sigma_{\lambda}^2}\\
+					&\hphantom{=}-\frac{w_{ii}}{\|W\|^2}\frac{\sigma_n\sum_{p,q}\sigma_{\lambda}^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_{\lambda}}\\
+                    &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\sum_{a}\left(\sigma_{\lambda}^{aa}w_{aa;i}\right)^2\\
+                    	&\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\sum_{a\neq b}\sigma_\lambda^{aa}\sigma_{\lambda}^{bb}w_{aa;i}w_{bb;i}\\
+                        &\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\sum_{a\neq b}\left(\sigma_{\lambda}^{aa}\sigma_{\lambda}^{bb}-\sigma_{\lambda}\sigma_{\lambda}^{aa,bb}\right)w_{aa;i}w_{bb;i}\Big].
+\end{split}\end{align}
+
+For sufficiently small $\delta'$ and $\lambda=1$ the simple estimates \cite[Equ.~(4.19), (4.20)]{Guan} give
+\begin{equation}
+\|W\|^4A_i\geq w_{ii}^2\sigma_n^{ii}w_{11;i}-C_{\epsilon}w_{ii}\sum_{a\neq 1}w_{aa;i}^2.
+\end{equation}
+
+Combining this with \eqref{app3-1} for $i=1$ yields, also using $\sigma_{n-1}(\kappa|ij)=0,$
+\begin{align}\begin{split}\label{app3-2}
+\|W\|^2(A_1+B_1+C_1+D_1-E_1)&\geq \sum_{j\neq 1} \sigma_{n-1}(\kappa|j)w_{jj;1}^2-\frac{C_{\epsilon}}{w_{11}}\sum_{j\neq 1}w_{jj;1}^2\\
+		&=\sum_{j\neq 1}\left(\frac{\sigma_n}{w_{jj}}-\frac{C_{\epsilon}}{w_{11}}\right)w_{jj;1}^2\\
+        &\geq \sum_{j\neq 1}\left(\frac{\sigma_n}{\delta' w_{11}}-\frac{C_{\epsilon}}{w_{11}}\right)w_{jj;1}^2,
+\end{split}\end{align}
+which is non-negative for $\delta'$ sufficiently small. Hence the lemma is true in the case $\lambda=1.$
+
+For $\lambda>1$ the series of elementary estimates \cite[Equ.~(4.22)-(4.27)]{Guan} gives
+\[
+\|W\|^4A_i\geq w_{ii}^2\sigma_n^{ii}\sum_{a\leq\lambda}w_{aa;i}^2-\frac{w_{ii}C_{\epsilon}}{\delta^2}\sum_{a>\lambda}w_{aa;i}^2,
+\]
+after having adapted $\epsilon$ if necessary and having chosen $\delta'$ sufficiently small
+again, combining this last inequality with \eqref{app3-1} for $1\leq i\leq \lambda$ yields
+\begin{align}\begin{split}
+\|W\|^2(A_i+B_i+C_i+D_i-E_i)&\geq \sum_{j\neq i}\sigma_{n-1}(\kappa|j)w_{jj;i}^2-\frac{w_{ii}C_{\epsilon}}{\delta^2}\sum_{j>\lambda}w_{jj;i}^2\\
+			&\geq \sum_{j>\lambda}\left(\sigma_{n-1}(\kappa|j)-\frac{w_{ii}C_{\epsilon}}{\delta^2}\right)w_{jj;i}^2,
+\end{split}\end{align}
+which is non-negative for small $\delta'$ for the same reason as in \eqref{app3-2}. This completes the proof.
+
 \end{proof}
-\section*{Acknowledgment}
+
+\begin{corollary}\label{Alternative}
+There exist positive numbers $\delta_1,\dots,\delta_n,$ depending only on the dimension, on $\epsilon$ and on the bounds for the Gauss curvature, such that either
+\begin{equation}
+\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n
+\end{equation}
+or
+\begin{equation}
+A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.
+\end{equation}
+\end{corollary}
+
+\section*{Acknowledgement}
+
 \bibliographystyle{amsplain}
 \begin{thebibliography}{10}
 \bibitem{1}J. Ai, K.S. Chou, and J. Wei, ``Self-similar solutions for the anisotropic affine curve shortening problem." Calc. Var. Partial Differential Equations 13(2001): 311--337.
@@ -571,7 +683,7 @@ In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1
 \bibitem{51}  P. Guan and C.S. Lin, ``On equation $\det(u_{ij} + \delta_{ij}u) = u^p f$." preprint No. 2000-7, NCTS in Tsing-Hua University, 2000.
 \bibitem{Guan}P. Guan, C. Ren, and Z. Wang, ``Global $C^2$ estimates for convex solutions of curvature equations." Comm. Pure Appl. Math. Vol. LXVIII, (2015): 1287--1325.
 \bibitem{QL}Y. Huang, Yong, and Q. Lu, ``On the regularity of the $L_p$ Minkowski problem." Adv. in Appl. Math. 50(2013): 268--280.
-\bibitem{Ivaki 2014-gauss} M.N. Ivaki, ``Deforming a hypersurface by Gauss curvature and support function." http://arxiv.org/pdf/1501.05456v5.pdf.
+\bibitem{Ivaki 2014-gauss} M.N. Ivaki, ``Deforming a hypersurface by Gauss curvature and support function."  J. Funct. Anal. (to appear), available at http://arxiv.org/pdf/1501.05456v6.pdf.
 \bibitem{Ivaki-Proc} M.N. Ivaki, ``An application of dual convex bodies to the inverse Gauss curvature flow." Proc. Amer. Math. Soc. 143(2015): 1257--1271.
 \bibitem{Ivaki-Stancu} M.N. Ivaki, and A. Stancu, ``Volume preserving centro-affine normal flows." Comm. Anal. Geom., 21(2013): 671--685.
 \bibitem{72}  M. Jiang, L. Wang, and J. Wei, ``$2\pi$-periodic self-similar solutions for the anistropic affine curve shortening problem." Calc. Var. Partial Differential Equations 41(2011): 535--565.
@@ -595,6 +707,7 @@ In the proof of \cite[Lemma 4.3]{Guan} we replace $\frac{\alpha}{2}$ by $\frac{1
 \bibitem{s2}A. Stancu, ``On the number of solutions to the discrete two-dimensional $L_0$-Minkowski problem." Adv. in Math. 180(2003): 290--323.
 \bibitem{104} A. Stancu, ``The discrete planar $L_0$-Minkowski problem." Adv. in Math. 167(2002): 160--174.
 \bibitem{Alina 2012} A. Stancu, ``Centro-affine invariants for smooth convex bodies."  Int. Math. Res. Not. IMRN 2012(2012): 2289--2320.
+\bibitem{Tso} Tso, Kaising ``Deforming a hypersurface by its {G}auss-{K}ronecker curvature'' Comm. Pure Appl. Math 38 No. 6 (1985): 867--882.
 \bibitem{Krylov-Safonov} N.V Krylov, and M.V. Safonov, ``Certain properties of parabolic equations with measurable coefficients." Izv. Akad. Nauk SSSR Ser. Mat. 40(1981): 161--175; English transl., Math. USSR Izv. 16(1981): 151--164.
 \bibitem {Oliver 2006} O. Schn\"{u}rer, ``Surfaces expanding by the inverse Gauss curvature flow."  J. Reine Angew. Math. 600(2006): 117--134.
 \bibitem{Tsai 2005} D.H. Tsai, ``Behavior of the gradient for solutions of parabolic equations on the circle." Calc. Var. Partial Differential Equations 23(2005): 251--270.
@@ -684,4 +797,5 @@ Consequently, we arrive at
 C(1+\alpha)+(\frac{C}{\varepsilon}+C-2C'\alpha)\kappa_1+(-\frac{a}{C''}\kappa_1^2+C(1+\epsilon^{-1})\alpha^2)\frac{\partial S}{\partial \kappa_1}.
 \end{align*}
 Taking $\alpha$ large enough such that $(\frac{C}{\varepsilon}+C-2C'\alpha)\leq-1$ completes the proof.
-\end{proof} 
+\end{proof}
+
