@@ -166,7 +166,7 @@ For convenience, let $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolutio
 \begin{align*}
 \partial_t w_i^j &= -\left(\frac{\psi}{\mathcal{K}}\right)_{;ij} - \left(\frac{\psi}{\mathcal{K}}\right) w_i^kw_k^j \\
 &= \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;kl}^j + \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^rw_i^j -(n+1)\frac{\psi }{\mathcal{K}} w_{i}^k w_k^{j} \\
-&\quad  + \psi\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^{2}}g^{jm} w_{kl;i}w_{rs;m}- \frac{2\psi}{\mathcal{K}^{3}} g^{jm} \mathcal{K}_{;i} \mathcal{K}_{;m} \\
+&\quad  + \psi\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^{2}}g^{jm} w_{kl;i}w_{rs;m}- \frac{2\psi}{\mathcal{K}^{3}}g^{jm} \mathcal{K}_{;i}\mathcal{K}_{;m} \\
 &\quad + \frac{1}{\mathcal{K}^{2}}g^{jk}\mathcal{K}_{;k}\psi_{;i} + \frac{1}{\mathcal{K}^{2}} g^{jk}\psi_{;k}\mathcal{K}_{;i} - \frac{1}{\mathcal{K}} g^{jk}\psi_{;ik},
 \end{align*}
 \begin{align*}
@@ -176,7 +176,8 @@ For convenience, let $\psi(x)=h^{2-p}(x)\varphi(\nu(x))$. The following evolutio
 %\partial_t\|F\|^2=\psi\dot{\Phi}S^{ij}\|F\|^2_{;ij}-2h\psi\dot{\Phi}S^{ij}g_{ij}+2\psi(\dot{\Phi}S-\Phi)h.
 %\end{align*}
 \end{lemma}
-
+\begin{proof}
+\end{proof}
 \section{long-time existence}
 \label{sec:long-time-existence}
 
@@ -306,7 +307,7 @@ The lower bound for $\mathcal{K}$ on $[0,\delta]$ for a small enough $\delta>0$ 
 
  To obtain upper and lower bounds on the principal curvatures, we will consider the test function used by Guan-Ren-Wang for a prescribed curvature problem; see \cite[(4.2)]{Guan}.
 \begin{lemma}\label{lem: final}
-Let $\{K_t\}$ be a solution of (\ref{e: flow0}) on $[0,t_1]$. If $c_1\leq h_{K_t}\leq c_2$ on $[0,t_1]$, then $c_5\leq \kappa_i\le c_6$ on $[0,t_1],$ where $c_5$ and $c_6$ depend on $K_0,$
+Let $\{K_t\}$ be a solution of (\ref{e: flow0}) on $[0,t_1]$. If $c_1\leq h_{K_t}\leq c_2$ on $[0,t_1]$, then $c_5\leq \kappa_i\le c_6$ on $[0,t_1],$ where $c_5$ and $c_6$ depend on $K_0$, $c_1,c_2,p,\varphi$ and $t_1.$
 \end{lemma}
 \begin{proof}
 In view of Lemmas \ref{lem: lower} and \ref{lem: upper}, it suffices to show that $\|W\|$ remains bounded on $[0,t_1]$. Consider the test function
@@ -316,7 +317,7 @@ Using the parabolic maximum principle we show that for some $\alpha$ large enoug
 \begin{align*}
 0 \leq& \dot{\Theta}-\psi\frac{\mathcal{K}^{kl}}{\mathcal{K}^2}\Theta_{;kl} \\
 &= -\frac{\psi}{\|W\|^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{i;k}^j w_{j;l}^i + \frac{2\psi}{\|W\|^4} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w^j_iw^s_r w^i_{j;k} w^r_{s;l} \\
-&+ \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r - \psi(n+1) \frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2} \\
+&+ \psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r - (n+1)\psi \frac{(w^2)_i^jw_j^i}{\mathcal{K}\|W\|^2} \\
 &+ \frac{\psi w^i_j}{\|W\|^2} \left(\frac{\mathcal{K}^{kl,rs}}{\mathcal{K}^2} w_{kl;i} g^{jp}jw_{rs;p} - 2\frac{g^{jp} \mathcal{K}_{;i}\mathcal{K}_{;p}}{\mathcal{K}^3}\right) \\
 &+ \left(\frac{2}{\mathcal{K}^2} g^{jp}\psi_{;i} \mathcal{K}_{;j} - \frac{1}{\mathcal{K}} g^{jp} \psi_{;ip}\right) \frac{w^i_j}{\|W\|^2} \\
 & +(n-1) \frac{\alpha\psi}{h\mathcal{K}} + \frac{\alpha}{h\mathcal{K}} (F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2} \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} h_{;k}h_{;l} - \alpha\psi \frac{\mathcal{K}^{kl}}{\mathcal{K}^2} w_{kr}w_l^r.
@@ -324,7 +325,7 @@ Using the parabolic maximum principle we show that for some $\alpha$ large enoug
 Working in an orthonormal frame at $(x_0,t_0)$, with respect to which we may write $$\mathcal{K}^{kl,rs}w_{kl;i}w_{rs;i}=\mathcal{K}^{kk,ll}w_{kk;i}w_{ll;i}-\mathcal{K}^{kk,ll}w_{kl;i}^2,$$ we obtain
 \begin{align*}
 0 \leq& -\frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_lw_{ll;i}^2 - \frac{\psi}{\|W\|^2} \mathcal{K}^{ii} \sum_{p\ne q}w_{pq;i}^2 + \frac{2\psi}{\|W\|^4} \mathcal{K}^{ii} \left(\sum_j\kappa_jw_{jj;i}\right)^2 \\
-&+ \psi\mathcal{K}^{ii} w_{ii}^2 - \psi(n+1) \mathcal{K} \sum_i\frac{w_{ii}^3}{\|W\|^2} \\
+&+ \psi\mathcal{K}^{ii} w_{ii}^2 -(n+1) \psi \mathcal{K} \sum_i\frac{w_{ii}^3}{\|W\|^2} \\
 &+ \frac{\psi w_{ii}}{\|W\|^2} \left(\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i} - \mathcal{K}^{pp,qq}w_{pq;i}^2 - 2\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}\right) \\
 &+ (2\psi_{;i}\mathcal{K}_{;i} - \mathcal{K}\psi_{;ii}) \frac{w_{ii}}{\|W\|^2} \\
 &+ (n-1) \frac{\alpha\psi\mathcal{K}}{h} + \frac{\alpha\mathcal{K}}{h}(F\cdot\nabla\psi) - \frac{\alpha\psi}{h^2}\mathcal{K}^{kl} h_{;k} h_{;l} - \alpha\psi\mathcal{K}^{ii}w_{ii}^2.
@@ -337,13 +338,12 @@ We may assume at $x_0$ that $w_1^1=\kappa_1=\max\{\kappa_i:1\leq i\leq n\}.$ The
 \begin{equation}\label{eq: max1}
 \Theta(x_0,t_0)=0\Rightarrow\frac{c_1^{\alpha}}{\sqrt{n}}\leq \kappa_1\leq c_2^{\alpha}.
 \end{equation}
-On the other hand, since $\psi$ is bounded below in view of the bounds on $h$ in the hypotheses of the theorem,
+On the other hand, since $\psi$ is bounded above and below in view of the hypotheses of the lemma, we obtain
 \begin{align}\label{eq: 1}
 \psi_{;i} \leq C_0\kappa_i \Rightarrow 2\psi_{;i} \mathcal{K}_{;i}&\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + \frac{c_4C_0^2}{\psi\varepsilon}\kappa_i^2\nonumber\\
-&\leq \frac{\varepsilon\psi}{c_4} (\mathcal{K}_{;i})^2 + C\frac{\psi\kappa_i^2}{\varepsilon}\nonumber\\
-&\leq \varepsilon\psi \frac{(\mathcal{K}_{;i})^2}{\mathcal{K}} + C(\epsilon) \psi\kappa_i^2,
+&\leq \varepsilon\psi \frac{(\mathcal{K}_{;i})^2}{\mathcal{K}} + C(\varepsilon,K_0,\varphi,t_1) \psi\kappa_i^2,
 \end{align}
-where $c_4$ is from Lemma \ref{lem: lower},
+where $c_4$ (depending on $t_1$) is from Lemma \ref{lem: lower},
 and
 \begin{equation}\label{eq: 2}
 \psi_{;ii} \geq - C - C\kappa_i - C\kappa_i^2 + w_{ii;k} d_{\nu} \psi(\partial_k).
@@ -355,13 +355,13 @@ Using (\ref{eq: max}) in (\ref{eq: 2}) we obtain
 &=\frac{\mathcal{K}}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\nonumber\\
 &\leq \frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i (\partial_i \cdot F) d_{\nu}\psi(\partial_i).
 \end{align}
-To get the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below.
+For the last inequality, we used that $\mathcal{K}$ is bounded above and $\psi$ is bounded below.
 
-Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that (where the constant $C$ depends on $\varepsilon$)
+Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that
 \begin{align}\begin{split}\label{eq:L10-1}
 0\leq& -\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_lw_{ll;i}^2-\frac{\psi}{\|W\|^2}\mathcal{K}^{ii}\sum_{p\ne q}w_{pq;i}^2
 +\frac{2\psi}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j\kappa_jw_{jj;i}\right)^2\\
-&+\psi\mathcal{K}^{ii}w_{ii}^2-\psi(n+1)\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
+&+\psi\mathcal{K}^{ii}w_{ii}^2-(n+1)\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2}\\
 &+\frac{\psi w_{ll}}{\|W\|^2}\left(\mathcal{K}^{pp,qq}w_{pp;l}w_{qq;l}-\mathcal{K}^{pp,qq}w_{pq;l}^2
 -(2-\varepsilon)\frac{(\mathcal{K}_{;l})^2}{\mathcal{K}}\right)\\
 &+\frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
@@ -373,7 +373,7 @@ Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that (where the constant $C$ 
 &-\psi\sum_i\left(A_i+B_i+C_i+D_i-E_i\right)
 -\frac{\alpha\psi\mathcal{K}}{h}-\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2},
 \end{split}\end{align}
-where $\beta \in \mathbb{R}$ is any constant, and
+where $\beta \in \mathbb{R}$ is any constant, the constant $C$ depends on $\varepsilon,K_0,\varphi,t_1$, and
 \[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
 
 \[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
@@ -398,21 +398,20 @@ or
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
 By taking $\alpha$ large in \eqref{eq: max1}, in the first case we get a contradiction to the bound on the Gauss curvature. In the second case, using also $\mathcal{K}^{ii}w_{ii}^2 = \mathcal{K} \sum_i \kappa_i$, \eqref{eq:L10-1} yields
 
-
 \begin{align*}
 0 \leq& \frac{\psi}{\|W\|^2}\left(\sum_l \kappa_l(C + C \kappa_l^2) - n \mathcal{K} \sum_l \kappa_l^3\right)- (\alpha-1) \mathcal{K} \psi \sum_i \kappa_i \\
-& + \psi \left((n-1)\frac{\mathcal{K}}{h} - \frac{\mathcal{K}}{h^2} \sum \kappa_i (\partial_i \cdot F)^2 + \frac{\mathcal{K}}{h\psi} \sum_l  (\partial_l \cdot F) d_F \psi (\partial_l) \right) \alpha
+& + \psi \left((n-1)\frac{\mathcal{K}}{h} - \frac{\mathcal{K}}{h^2} \sum \kappa_i (\partial_i \cdot F)^2 + \frac{\mathcal{K}}{h\psi} \sum_l  (\partial_l \cdot F) d_F \psi (\partial_l) \right) \alpha.
 \end{align*}
-so
-$0\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi \kappa_1 + C \alpha,$
+Consequently, we obtain
+\[0\leq \frac{C(\varepsilon,K_0,\varphi,t_1)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi \kappa_1 + C(K_0,\varphi,t_1) \alpha,\]
 where we discarded $-(\alpha-1)\mathcal{K}\psi \sum_{i\neq 1} \kappa_i \leq 0$ and used the bounds on $h, \psi$ and $\mathcal{K}$ to bound $\kappa_1$ in terms of $\kappa_1^3$.
 
-Now take $\alpha$ such that $(\alpha-1) \mathcal{K}\psi \geq C(\varepsilon)+1$. Therefore, in view of (\ref{eq: max1})
+Now take $\alpha$ such that $(\alpha-1) \mathcal{K}\psi \geq C(\varepsilon,K_0,\varphi,t_1)+1$. Therefore, in view of (\ref{eq: max1})
 \begin{equation}\label{x}
 \begin{split}
-0 &\leq \frac{C(\varepsilon)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi\kappa_1 + C\alpha \\
-&\leq C(\epsilon)\left(\frac{\kappa_1^2}{\|W\|^2} - 1\right) \kappa_1 - \kappa_1 + C\alpha \\
-&\leq -\frac{c_1^{\alpha}}{\sqrt{n}} + C\alpha.
+0 &\leq \frac{C(\varepsilon,K_0,\varphi,t_1)\kappa_1^3}{\|W\|^2} - (\alpha-1) \mathcal{K}\psi\kappa_1 + C(K_0,\varphi,t_1)\alpha \\
+&\leq C(\varepsilon,K_0,\varphi,t_1)\left(\frac{\kappa_1^2}{\|W\|^2} - 1\right) \kappa_1 - \kappa_1 + C(K_0,\varphi,t_1)\alpha \\
+&\leq -\frac{c_1^{\alpha}}{\sqrt{n}} + C(K_0,\varphi,t_1)\alpha.
 \end{split}
 \end{equation}
 Taking $\alpha$ large enough yields a contradiction.
@@ -684,7 +683,7 @@ A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.
 \bibitem{51}  P. Guan and C.S. Lin, ``On equation $\det(u_{ij} + \delta_{ij}u) = u^p f$." preprint No. 2000-7, NCTS in Tsing-Hua University, 2000.
 \bibitem{Guan}P. Guan, C. Ren, and Z. Wang, ``Global $C^2$ estimates for convex solutions of curvature equations." Comm. Pure Appl. Math. Vol. LXVIII, (2015): 1287--1325.
 \bibitem{QL}Y. Huang, Yong, and Q. Lu, ``On the regularity of the $L_p$ Minkowski problem." Adv. in Appl. Math. 50(2013): 268--280.
-\bibitem{Ivaki 2014-gauss} M.N. Ivaki, ``Deforming a hypersurface by Gauss curvature and support function." http://arxiv.org/pdf/1501.05456v5.pdf.
+\bibitem{Ivaki 2014-gauss} M.N. Ivaki, ``Deforming a hypersurface by Gauss curvature and support function."  J. Funct. Anal. (to appear), available at http://arxiv.org/pdf/1501.05456v6.pdf.
 \bibitem{Ivaki-Proc} M.N. Ivaki, ``An application of dual convex bodies to the inverse Gauss curvature flow." Proc. Amer. Math. Soc. 143(2015): 1257--1271.
 \bibitem{Ivaki-Stancu} M.N. Ivaki, and A. Stancu, ``Volume preserving centro-affine normal flows." Comm. Anal. Geom., 21(2013): 671--685.
 \bibitem{72}  M. Jiang, L. Wang, and J. Wei, ``$2\pi$-periodic self-similar solutions for the anistropic affine curve shortening problem." Calc. Var. Partial Differential Equations 41(2011): 535--565.
