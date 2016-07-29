@@ -427,8 +427,10 @@ Taking $\alpha$ large enough yields a contradiction.
 The solution to (\ref{e: flow0}) satisfies $\lim\limits_{t\to T}\max h_{K_t}=\infty.$
 \end{proposition}
 \begin{proof}
-First, let $p> n+1.$ In this case, by comparing with outer balls, the flow exists on $[0,\infty).$
-Consider an origin centered ball $B_r$, such that $K_0\supseteq B_r.$ Then $K_t\supseteq B_{r(t)},$ where $$r(t)=\left((\min h_{K_0})^{p-n-1}+t(p-n-1)\min \varphi \right)^{\frac{1}{p-n-1}}$$ and $B_{r(t)}$ expands to infinity as $t$ approaches $\infty$. When $p=n+1$ the argument is similar. Second, if $p<n+1$, then the flow exists only on a finite time interval. If $\max h_{K_t}<\infty$, then by Lemmas \ref{lem: lower}, \ref{lem: upper} and \ref{lem: final}, the evolution equation (\ref{e: flow0}) is uniformly parabolic on $[0,T)$. Thus, the result of Krylov and Safonov \cite{Krylov-Safonov} and standard parabolic theory allow us to extend the solution smoothly past time $T$, contradicting its maximality.
+First, let $p\geq n+1.$ In this case, by comparing with suitable outer balls, the flow exists on $[0,\infty).$
+For $p>n+1,$ consider an origin centered ball $B_r$, such that $K_0\supseteq B_r.$ Then $K_t\supseteq B_{r(t)},$ where $$r(t)=\left((\min h_{K_0})^{p-n-1}+t(p-n-1)\min \varphi \right)^{\frac{1}{p-n-1}}$$ and $B_{r(t)}$ expands to infinity as $t$ approaches $\infty$. For $p=n+1$, $K_t\supseteq B_{r(t)}$ with $r(t)=e^{t\min\varphi}\min h_{K_0}$ and $B_{r(t)}$ expands to infinity as $t$ approaches $\infty$
+
+Second, if $p<n+1$, then the flow exists only on a finite time interval. If $\max h_{K_t}<\infty$, then by Lemmas \ref{lem: lower}, \ref{lem: upper} and \ref{lem: final}, the evolution equation (\ref{e: flow0}) is uniformly parabolic on $[0,T)$. Thus, the result of Krylov and Safonov \cite{Krylov-Safonov} and standard parabolic theory allow us to extend the solution smoothly past time $T$, contradicting its maximality.
 \end{proof}
 \section{convergence of normalized solutions}\label{sec: nor conv}
 \subsection{Convergence in $C^{1}$, $p\neq 1>-n-1$}\label{sec}
