@@ -557,7 +557,18 @@ Replacing $r$ by $1/h^{\ast}$ and taking into account (\textbf{b}) finishes the 
 \end{proof}
 
 \subsection*{Estimates for curvature derivatives}
-For convenience we present some of the main ideas, how one can prove the alternative in Lemma \ref{lem: final} about balancing the curvature derivatives. This method was used in \cite{Guan} for a similar stationary prescribed curvature equation.
+
+For convenience we present some of the main ideas, how one can prove the alternative in Lemma \ref{lem: final} about balancing the curvature derivatives. This method was used in \cite{Guan} for a similar stationary prescribed curvature equation. Recall that
+\[A_i=\frac{2-\varepsilon}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
+
+\[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
+
+\[D_i=\frac{1}{\|W\|^2}\mathcal{K}^{ii}\sum_j w_{jj;i}^2,\quad
+E_i=\frac{2}{\|W\|^4}\mathcal{K}^{ii}\left(\sum_j w_{jj}w_{jj;i}\right)^2.\]
+
+
+Note that the term $A_i$ looks slightly different from the term $A_i$ in \cite[p. 1309]{Guan}, where the $\mathcal{K}$ is not present in the denominator. We have to define $A_i$ in the way we did, because due to the inverse nature of the curvature flow equation we obtain an extra good derivative term. This allows us to choose the constant in $A_i$ as $2 - \varepsilon$, whereas a large constant was required in \cite{Guan}. Fortunately the proofs of \cite[Lemma~4.2, Lemma~4.3]{Guan} also work for sufficiently small $\varepsilon$. The remaining terms $B_i,C_i,D_i,E_i$ are all identical to \cite{Guan}.
+
 In the following $\sigma_k$ denotes the $k$-th elementary symmetric function of principal curvatures. We begin by recalling the following special case of inequality (2.4) from \cite[Lemma 2.2]{Guan}, which can be deduced easily by differentiating
 \[\log G=\log \left(\frac{\sigma_k}{\sigma_l}\right)^{\frac{1}{k-l}}\] twice, using the concavity of $G$ and applying the Schwartz inequality.
 For any $\delta>0$ and $1\leq l<n$ we have
@@ -567,22 +578,17 @@ For any $\delta>0$ and $1\leq l<n$ we have
 \end{align*}
 In particular, by taking $\delta=\frac{1}{2-\varepsilon}$, we have
 \begin{align}\begin{split}\label{key ineq}
-(2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right]\frac{\mathcal{K}((\sigma_l)_{;i})^2}{\sigma_l^2}\\
-					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}.
+(2-\varepsilon)\frac{(\mathcal{K}_{;i})^2}{\mathcal{K}}-\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i}&\geq \left[1+\frac{1-\varepsilon}{(n-l)(2-\varepsilon)}\right]\frac{\mathcal{K}((\sigma_l)_{;i})^2}{\sigma_l^2}\\
+					&\hphantom{=}-\frac{\mathcal{K}\sigma_l^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_l}
 \end{split}\end{align}
-
-
-
-\begin{remark}
-Note that the term $A_i$ looks slightly different from the term $A_i$ in \cite{Guan}, where the $\mathcal{K}$ is not present in the denominator. We have to define $A_i$ in the way we did, because due to the inverse nature of the curvature flow equation we obtain an extra good derivative term, into which we can absorb the $\beta$-part of $A_i$, if it is not too large. Fortunately the proofs of \cite[Lemma~4.2, Lemma~4.3]{Guan} also work for some $\beta<2$ as we will indicate shortly.
-\end{remark}
+provided $(2-\varepsilon) \geq 1$, i.e. $0 < \varepsilon < 1$.
 
 \begin{lemma}\label{app2}
 For each $i\ne 1,$ if $\sqrt{3}\kappa_i\leq \kappa_1,$ we have
 \[A_i+B_i+C_i+D_i-E_i\geq 0.\]
 \end{lemma}
 \begin{proof}
-Note that from (\ref{key ineq}) it follows that $A_i\geq 0.$ The proof of that $B_i+C_i+D_i-E_i\geq 0$ can literally be taken from \cite[Lemma 4.2]{Guan}, starting with \cite[Equ.~(4.10)]{Guan}.
+Note that from (\ref{key ineq}) with $l=1$, it follows that $A_i\geq 0$ since $\sigma_1^{pp,qq} = 0$. The proof of that $B_i+C_i+D_i-E_i\geq 0$ can literally be taken from \cite[Lemma 4.2]{Guan}, starting with \cite[Equ.~(4.10)]{Guan}.
 \end{proof}
 
 In the following proof we will write $\sigma_n=\mathcal{K}$ for a better comparability with \cite[Lemma~4.3]{Guan}. Also denote by $\sigma_k(\kappa|i)$ the $k$-th elementary symmetric polynomial in the variables $\kappa_1,\dots,\kappa_{i-1},\kappa_{i+1},\dots,\kappa_n$ and $\sigma_k(\kappa|ij)$ accordingly.
@@ -593,19 +599,21 @@ For $\lambda=1,\cdots,n-1$ suppose there exists some $\delta\leq 1$ such that $\
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad \text{for}~i=1,\cdots,n.\]
 \end{lemma}
 \begin{proof}
-This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in this proof. First of all, from the estimates in \cite[Lemma~4.2]{Guan} one can extract the following estimate:
+This corresponds to \cite[Lemma~4.3]{Guan}. We highlight the main estimates in this proof. First of all, from \cite[Equ.~(4.16), (4.17)]{Guan} one can extract the following estimate:
 \begin{align}\begin{split}\label{app3-1}
 \|W\|^4(B_i+C_i+D_i-E_i)&\geq \|W\|^2\sum_{j\neq i} \left(\sigma_{n-1}(\kappa|j)-2\sigma_{n-1}(\kappa|ij)\right)w_{jj;i}^2\\
-				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2,
+				&\hphantom{=}-w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2 \\
+&= \|W\|^2\sum_{j\neq i} \sigma_{n-1}(\kappa|j) w_{jj;i}^2 - w_{ii}^2\sigma_{n}^{ii}w_{ii;i}^2 \\
 \end{split}\end{align}
-compare \cite[Equ.~(4.16), (4.17)]{Guan}.
-Now we need to estimate $A_i$, where we recall taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
+since $\sigma_{n-1}(\kappa|ij) = 0$.
+
+Now we show the right hand side of \eqref{app3-1} is dominated by $\|W\|^4A_i$. From \eqref{key ineq} we get for all $1\leq \lambda<n$ and for all $1\leq i\leq n\colon$
 \begin{align}\begin{split}\label{}
-A_i&=\frac{\beta w_{ii}}{\|W\|^2\sigma_n}((\sigma_n)_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
-		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\frac{\sigma_n((\sigma_{\lambda})_{;i})^2}{\sigma_{\lambda}^2}\\
+A_i&=\frac{(2-\varepsilon) w_{ii}}{\|W\|^2\sigma_n}((\sigma_n)_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\sigma_n^{pp,qq}w_{pp;i}w_{qq;i}\\
+		&\geq \frac{w_{ii}}{\|W\|^2}\left(1+\frac{1-\varepsilon}{(n-\lambda)(2-\varepsilon)}\right)\frac{\sigma_n((\sigma_{\lambda})_{;i})^2}{\sigma_{\lambda}^2}\\
 					&\hphantom{=}-\frac{w_{ii}}{\|W\|^2}\frac{\sigma_n\sum_{p,q}\sigma_{\lambda}^{pp,qq}w_{pp;i}w_{qq;i}}{\sigma_{\lambda}}\\
-                    &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\right)\sum_{a}\left(\sigma_{\lambda}^{aa}w_{aa;i}\right)^2\\
-                    	&\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\frac{1-\varepsilon}{(n-1)(2-\varepsilon)}\sum_{a\neq b}\sigma_\lambda^{aa}\sigma_{\lambda}^{bb}w_{aa;i}w_{bb;i}\\
+                    &=\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big[\left(1+\frac{1-\varepsilon}{(n-\lambda)(2-\varepsilon)}\right)\sum_{a}\left(\sigma_{\lambda}^{aa}w_{aa;i}\right)^2\\
+                    	&\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\frac{1-\varepsilon}{(n-\lambda)(2-\varepsilon)}\sum_{a\neq b}\sigma_\lambda^{aa}\sigma_{\lambda}^{bb}w_{aa;i}w_{bb;i}\\
                         &\hphantom{\frac{w_{ii}\sigma_n}{\|W\|^2\sigma_{\lambda}^2}\Big(}+\sum_{a\neq b}\left(\sigma_{\lambda}^{aa}\sigma_{\lambda}^{bb}-\sigma_{\lambda}\sigma_{\lambda}^{aa,bb}\right)w_{aa;i}w_{bb;i}\Big].
 \end{split}\end{align}
 
@@ -614,7 +622,7 @@ For sufficiently small $\delta'$ and $\lambda=1$ the simple estimates \cite[Equ.
 \|W\|^4A_i\geq w_{ii}^2\sigma_n^{ii}w_{11;i}-C_{\epsilon}w_{ii}\sum_{a\neq 1}w_{aa;i}^2.
 \end{equation}
 
-Combining this with \eqref{app3-1} for $i=1$ yields, also using $\sigma_{n-1}(\kappa|ij)=0,$
+Combining this with \eqref{app3-1} for $i=1$ yields,
 \begin{align}\begin{split}\label{app3-2}
 \|W\|^2(A_1+B_1+C_1+D_1-E_1)&\geq \sum_{j\neq 1} \sigma_{n-1}(\kappa|j)w_{jj;1}^2-\frac{C_{\epsilon}}{w_{11}}\sum_{j\neq 1}w_{jj;1}^2\\
 		&=\sum_{j\neq 1}\left(\frac{\sigma_n}{w_{jj}}-\frac{C_{\epsilon}}{w_{11}}\right)w_{jj;1}^2\\
@@ -627,10 +635,11 @@ For $\lambda>1$ the series of elementary estimates \cite[Equ.~(4.22)-(4.27)]{Gua
 \|W\|^4A_i\geq w_{ii}^2\sigma_n^{ii}\sum_{a\leq\lambda}w_{aa;i}^2-\frac{w_{ii}C_{\epsilon}}{\delta^2}\sum_{a>\lambda}w_{aa;i}^2,
 \]
 after having adapted $\epsilon$ if necessary and having chosen $\delta'$ sufficiently small
-again, combining this last inequality with \eqref{app3-1} for $1\leq i\leq \lambda$ yields
+again. Combining this last inequality with \eqref{app3-1} for $1\leq i\leq \lambda$ yields
 \begin{align}\begin{split}
-\|W\|^2(A_i+B_i+C_i+D_i-E_i)&\geq \sum_{j\neq i}\sigma_{n-1}(\kappa|j)w_{jj;i}^2-\frac{w_{ii}C_{\epsilon}}{\delta^2}\sum_{j>\lambda}w_{jj;i}^2\\
-			&\geq \sum_{j>\lambda}\left(\sigma_{n-1}(\kappa|j)-\frac{w_{ii}C_{\epsilon}}{\delta^2}\right)w_{jj;i}^2,
+\|W\|^2(A_i+B_i+C_i+D_i-E_i)&\geq \sum_{j\neq i}\sigma_{n-1}(\kappa|j)w_{jj;i}^2-\frac{C_{\epsilon}}{w_{ii}\delta^2}\sum_{j>\lambda}w_{jj;i}^2\\
+			&\geq \sum_{j>\lambda}\left(\sigma_{n-1}(\kappa|j)-\frac{C_{\epsilon}}{w_{ii}\delta^2}\right)w_{jj;i}^2\\
+                        &\geq \sum_{j>\lambda}\left(\frac{\sigma_n}{w_{11}\delta'}-\frac{C_{\epsilon}}{w_{ii}\delta^2}\right)w_{jj;i}^2,
 \end{split}\end{align}
 which is non-negative for small $\delta'$ for the same reason as in \eqref{app3-2}. This completes the proof.
 
