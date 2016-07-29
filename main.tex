@@ -367,14 +367,13 @@ Combining  (\ref{eq: 1}) and (\ref{eq: 3}) implies that
 &+\frac{\psi}{\|W\|^2}\sum_i \kappa_i(C+C\kappa_i^2)-\frac{\alpha\mathcal{K}}{h}\sum_i \kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &+(n-1)\frac{\alpha\psi\mathcal{K}}{h}+\frac{\alpha\mathcal{K}}{h}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)+\frac{\alpha\mathcal{K}}{h}\sum_i\kappa_i(\partial_i\cdot F) d_{\nu}\psi(\partial_i)\\
 &-\frac{\alpha\psi}{h^2}\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2 -\alpha\psi\mathcal{K}^{ii}w_{ii}^2\\
-\leq&\frac{\psi}{\|W\|^2}\left(\sum_l\kappa_l\left(C+C\kappa_l^2+\frac{(\beta
--2+\varepsilon)(\mathcal{K}_{;l})^2}{\mathcal{K}}\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
+\leq&\frac{\psi}{\|W\|^2}\left(\sum_l\kappa_l\left(C+C\kappa_l^2\right)-n\mathcal{K}\sum_l\kappa_l^3+\mathcal{K}^{ii}w_{ii}^2\|W\|^2\right)\\
 &+\alpha\psi\left(\frac{n\mathcal{K}}{h}-\mathcal{K}^{ii}w_{ii}^2-\frac{\mathcal{K}^{ii}w_{ii}^2(\partial_i\cdot F)^2}{h^2}+\frac{\mathcal{K}}{h\psi}\sum_s(\partial_s\cdot F) d_F\psi(\partial_s)\right)\\
 &-\psi\sum_i\left(A_i+B_i+C_i+D_i-E_i\right)
 -\frac{\alpha\psi\mathcal{K}}{h}-\psi\mathcal{K}\sum_i\frac{w_{ii}^3}{\|W\|^2},
 \end{split}\end{align}
-where $\beta \in \mathbb{R}$ is any constant, the constant $C$ depends on $\varepsilon,K_0,\varphi,t_1$, and
-\[A_i=\frac{\beta}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
+where $C$ depends on $\varepsilon,K_0,\varphi,t_1$, and
+\[A_i=\frac{2-\varepsilon}{\|W\|^2\mathcal{K}} w_{ii}(\mathcal{K}_{;i})^2-\frac{w_{ii}}{\|W\|^2}\sum_{p,q}\mathcal{K}^{pp,qq}w_{pp;i}w_{qq;i},\]
 
 \[B_i=\frac{2}{\|W\|^2}\sum_{j}w_{jj}\mathcal{K}^{jj,ii}w^2_{jj;i},\quad C_i=\frac{2}{\|W\|^2}\sum_{j\neq i}\mathcal{K}^{jj}w_{jj;i}^2,\]
 
@@ -392,7 +391,7 @@ The third line of \eqref{eq:L10-1} arises from
 see, for example, \cite[Lemma~2.1.14]{Gerhardt:/2006} for this relation. Since the second term in the bracket is negative and the hypersurface is convex, we can proceed in the same way as we derived $C_i$ and just throw away all indices $i$ which are neither $p$ or $q$. This gives term $B_i$. The first term in the big bracket goes into $A_i$.
 
 
-In Corollary \ref{Alternative} of the appendix we will present an adaption of the method developed in \cite{Guan} to deal with the curvature derivative terms $A_i,B_i,C_i,D_i,E_i$. There we prove that by taking $\beta=2-\varepsilon$ with $0<\varepsilon<1$ we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
+In Corollary \ref{Alternative} of the appendix we will present an adaption of the method developed in \cite{Guan} to deal with the curvature derivative terms $A_i,B_i,C_i,D_i,E_i$. There we prove that we obtain the following alternative: Either there exist positive numbers $\delta_1,\dots,\delta_n$, which only depend on the dimension, such that
 \[\kappa_i\geq \delta_i\kappa_1\quad\forall 1\leq i\leq n\]
 or
 \[A_i+B_i+C_i+D_i-E_i\geq 0\quad\forall 1\leq i\leq n.\]
